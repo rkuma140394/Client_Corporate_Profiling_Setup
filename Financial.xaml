@@ -5,7 +5,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1152,1224</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1486,3008</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Financial_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -45,6 +45,7 @@
       <x:String>System.Linq.Expressions</x:String>
       <x:String>UiPath.UIAutomationNext.Contracts</x:String>
       <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>System.Numerics</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -96,29 +97,36 @@
       <AssemblyReference>System.Private.Uri</AssemblyReference>
       <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
       <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Linq.Parallel</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+      <AssemblyReference>System.Linq.Queryable</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Financial" sap:VirtualizedContainerService.HintSize="512,1159.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Financial" sap:VirtualizedContainerService.HintSize="704,9564" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: ARTrail [PCS]" sap:VirtualizedContainerService.HintSize="450,1071.3333333333333" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="85332b24-ecfd-4007-a523-26f8fa30724f" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: ARTrail [PCS]" sap:VirtualizedContainerService.HintSize="642,9476" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="85332b24-ecfd-4007-a523-26f8fa30724f" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,829.3333333333334" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="608,9234" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:String" Name="str" />
+            </Sequence.Variables>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Financial'" sap:VirtualizedContainerService.HintSize="354,229.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="85332b24-ecfd-4007-a523-26f8fa30724f" Version="V3">
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Financial'" sap:VirtualizedContainerService.HintSize="546,229.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="85332b24-ecfd-4007-a523-26f8fa30724f" Version="V3">
               <uix:NClick.Target>
-                <uix:TargetAnchorable BrowserURL="https://pcs-uat.professionalcredit.com/clientmaster" CVScreenId="560ba960-394c-46fa-8a3c-a706ce587f08" CvTextArea="88, 727, 81, 19" CvTextArgument="Financial" CvType="Text" DesignTimeRectangle="11, 676, 238, 96" DesignTimeScaleFactor="1.5" ElementType="Text" FullSelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl parentid='financial' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl parentid='financial' tag='A' type='' class='nav-link' aaname='  Financial ' check:innerText='Financial' /&gt;" Guid="b5e981b6-ae1a-48c8-bd07-7867cf468806" InformativeScreenshot="9352f20e448e3ad89fc8159987d7a104.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ARTrail [PCS]' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V3" Visibility="Interactive" />
+                <uix:TargetAnchorable BrowserURL="https://pcs-uat.professionalcredit.com/clientmaster" CVScreenId="560ba960-394c-46fa-8a3c-a706ce587f08" CvTextArea="88, 727, 81, 19" CvTextArgument="Financial" CvType="Text" DesignTimeRectangle="11, 676, 238, 96" DesignTimeScaleFactor="1.5" ElementType="Text" FullSelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl parentid='financial' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl parentid='financial' tag='A' type='' class='nav-link' aaname='  Financial ' check:innerText='Financial' /&gt;" Guid="b5e981b6-ae1a-48c8-bd07-7867cf468806" InformativeScreenshot="9352f20e448e3ad89fc8159987d7a104.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ARTrail [PCS]' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V3" Visibility="Interactive" WaitForReadyArgument="Complete" />
               </uix:NClick.Target>
               <uix:NClick.VerifyOptions>
                 <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
@@ -137,7 +145,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </uix:NClick>
-            <If Condition="[Fncl_Config(&quot;Remittance Type&quot;).ToString.Contains(&quot;Net Remit&quot;)]" sap:VirtualizedContainerService.HintSize="354,57.333333333333336" sap2010:WorkflowViewState.IdRef="If_1">
+            <If Condition="[Fncl_Config(&quot;Remittance Type&quot;).ToString.Contains(&quot;Net Remit&quot;)]" sap:VirtualizedContainerService.HintSize="546,57.333333333333336" sap2010:WorkflowViewState.IdRef="If_1">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -145,14 +153,13 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <If.Then>
-                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,25.333333333333332" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="512,982" sap2010:WorkflowViewState.IdRef="Sequence_3">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <uix:NSelectItem DisplayName="Select Item 'Remittance Type'" sap:VirtualizedContainerService.HintSize="354,191.33333333333334" sap2010:WorkflowViewState.IdRef="NSelectItem_2" Item="NET Remit" ScopeIdentifier="85332b24-ecfd-4007-a523-26f8fa30724f" Version="V3">
+                  <uix:NSelectItem DisplayName="Select Item 'Remittance Type'" sap:VirtualizedContainerService.HintSize="450,191.33333333333334" sap2010:WorkflowViewState.IdRef="NSelectItem_2" Item="NET Remit" ScopeIdentifier="85332b24-ecfd-4007-a523-26f8fa30724f" Version="V3">
                     <uix:NSelectItem.Items>
                       <scg:List x:TypeArguments="x:String" Capacity="4">
                         <x:String>Select</x:String>
@@ -171,22 +178,16 @@
                       </uix:TargetAnchorable>
                     </uix:NSelectItem.Target>
                   </uix:NSelectItem>
-                  <If Condition="[Fncl_Config(&quot;Remittance Type&quot;).ToString.Contains(&quot;Include&quot;)]" sap:VirtualizedContainerService.HintSize="354,48" sap2010:WorkflowViewState.IdRef="If_2">
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
+                  <If Condition="[Fncl_Config(&quot;Remittance Type&quot;).ToString.Contains(&quot;Include&quot;)]" sap:VirtualizedContainerService.HintSize="450,702.6666666666666" sap2010:WorkflowViewState.IdRef="If_2">
                     <If.Then>
-                      <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,25.333333333333332" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                      <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,270" sap2010:WorkflowViewState.IdRef="Sequence_5">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             <x:Boolean x:Key="IsPinned">False</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <uix:NSelectItem DisplayName="Select Item 'Trust Balance'" sap:VirtualizedContainerService.HintSize="354,48" sap2010:WorkflowViewState.IdRef="NSelectItem_3" Item="Include Direct Payments" ScopeIdentifier="85332b24-ecfd-4007-a523-26f8fa30724f" Version="V3">
+                        <uix:NSelectItem DisplayName="Select Item 'Trust Balance'" sap:VirtualizedContainerService.HintSize="354,182" sap2010:WorkflowViewState.IdRef="NSelectItem_3" Item="Include Direct Payments" ScopeIdentifier="85332b24-ecfd-4007-a523-26f8fa30724f" Version="V3">
                           <uix:NSelectItem.Items>
                             <scg:List x:TypeArguments="x:String" Capacity="3">
                               <x:String>Select</x:String>
@@ -205,7 +206,7 @@
                           </uix:NSelectItem.Target>
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               <x:Boolean x:Key="IsPinned">False</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
@@ -213,14 +214,14 @@
                       </Sequence>
                     </If.Then>
                     <If.Else>
-                      <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,25.333333333333332" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                      <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,270" sap2010:WorkflowViewState.IdRef="Sequence_6">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             <x:Boolean x:Key="IsPinned">False</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <uix:NSelectItem DisplayName="Select Item 'Trust Balance'" sap:VirtualizedContainerService.HintSize="354,48" sap2010:WorkflowViewState.IdRef="NSelectItem_4" Item="Include Direct Payments" ScopeIdentifier="85332b24-ecfd-4007-a523-26f8fa30724f" Version="V3">
+                        <uix:NSelectItem DisplayName="Select Item 'Trust Balance'" sap:VirtualizedContainerService.HintSize="354,182" sap2010:WorkflowViewState.IdRef="NSelectItem_4" Item="Exclude Direct Payments" ScopeIdentifier="85332b24-ecfd-4007-a523-26f8fa30724f" Version="V3">
                           <uix:NSelectItem.Items>
                             <scg:List x:TypeArguments="x:String" Capacity="3">
                               <x:String>Select</x:String>
@@ -239,7 +240,7 @@
                           </uix:NSelectItem.Target>
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               <x:Boolean x:Key="IsPinned">False</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
@@ -250,19 +251,18 @@
                 </Sequence>
               </If.Then>
               <If.Else>
-                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="512,301.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="512,790.6666666666666" sap2010:WorkflowViewState.IdRef="Sequence_4">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <If Condition="[Fncl_Config(&quot;Remittance Type&quot;).ToString.ToUpper.Contains(&quot;GROSS REMIT&quot;)]" sap:VirtualizedContainerService.HintSize="450,213.33333333333334" sap2010:WorkflowViewState.IdRef="If_3">
+                  <If Condition="[Fncl_Config(&quot;Remittance Type&quot;).ToString.ToUpper.Contains(&quot;GROSS REMIT&quot;)]" sap:VirtualizedContainerService.HintSize="450,702.6666666666666" sap2010:WorkflowViewState.IdRef="If_3">
                     <If.Then>
-                      <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,25.333333333333332" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                      <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,270" sap2010:WorkflowViewState.IdRef="Sequence_7">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                         <uix:NSelectItem DisplayName="Select Item 'Gross Remit'" sap:VirtualizedContainerService.HintSize="354,182" sap2010:WorkflowViewState.IdRef="NSelectItem_5" Item="Gross Remit" ScopeIdentifier="85332b24-ecfd-4007-a523-26f8fa30724f" Version="V3">
@@ -281,11 +281,10 @@
                       </Sequence>
                     </If.Then>
                     <If.Else>
-                      <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,25.333333333333332" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                      <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,270" sap2010:WorkflowViewState.IdRef="Sequence_8">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                         <uix:NSelectItem DisplayName="Select Item 'Gross Remit'" sap:VirtualizedContainerService.HintSize="354,182" sap2010:WorkflowViewState.IdRef="NSelectItem_6" Item="Fixed Fee" ScopeIdentifier="85332b24-ecfd-4007-a523-26f8fa30724f" Version="V3">
@@ -307,7 +306,7 @@
                 </Sequence>
               </If.Else>
             </If>
-            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="354,57.333333333333336" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="546,57.333333333333336" sap2010:WorkflowViewState.IdRef="CommentOut_1">
               <ui:CommentOut.Body>
                 <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,270" sap2010:WorkflowViewState.IdRef="Sequence_9">
                   <sap:WorkflowViewStateService.ViewState>
@@ -343,7 +342,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:CommentOut>
-            <uix:NSelectItem DisplayName="Select Item 'Direct Payment'" sap:VirtualizedContainerService.HintSize="354,57.333333333333336" sap2010:WorkflowViewState.IdRef="NSelectItem_7" Item="Deduct from Trust Amount" ScopeIdentifier="85332b24-ecfd-4007-a523-26f8fa30724f" Version="V3">
+            <uix:NSelectItem DisplayName="Select Item 'Direct Payment'" sap:VirtualizedContainerService.HintSize="546,191.33333333333334" sap2010:WorkflowViewState.IdRef="NSelectItem_7" Item="Deduct from Trust Amount" ScopeIdentifier="85332b24-ecfd-4007-a523-26f8fa30724f" Version="V3">
               <uix:NSelectItem.Items>
                 <scg:List x:TypeArguments="x:String" Capacity="3">
                   <x:String>Select</x:String>
@@ -362,488 +361,497 @@
               </uix:NSelectItem.Target>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </uix:NSelectItem>
-            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="354,57.333333333333336" sap2010:WorkflowViewState.IdRef="CommentOut_4">
-              <ui:CommentOut.Body>
-                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,881.3333333333334" sap2010:WorkflowViewState.IdRef="Sequence_34">
+            <If Condition="[Fncl_Config(&quot;Export Type&quot;).ToString().ToUpper.Contains(&quot;OTHER&quot;) OR Fncl_Config(&quot;Export Type&quot;).ToString().ToUpper.Contains(&quot;ARCHIVE&quot;)]" sap:VirtualizedContainerService.HintSize="546,712" sap2010:WorkflowViewState.IdRef="If_4">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <If.Then>
+                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,270" sap2010:WorkflowViewState.IdRef="Sequence_13">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <If Condition="[Fncl_Config(&quot;Export Type&quot;).ToString().ToUpper.Contains(&quot;OTHER&quot;)]" sap:VirtualizedContainerService.HintSize="354,57.333333333333336" sap2010:WorkflowViewState.IdRef="If_4">
+                  <uix:NSelectItem DisplayName="Select Item 'Export Type'" sap:VirtualizedContainerService.HintSize="354,182" sap2010:WorkflowViewState.IdRef="NSelectItem_8" Item="Archive" ScopeIdentifier="85332b24-ecfd-4007-a523-26f8fa30724f" Version="V3">
+                    <uix:NSelectItem.Items>
+                      <scg:List x:TypeArguments="x:String" Capacity="4">
+                        <x:String>Select</x:String>
+                        <x:String>Archive</x:String>
+                        <x:String>Email</x:String>
+                        <x:String>Print</x:String>
+                      </scg:List>
+                    </uix:NSelectItem.Items>
+                    <uix:NSelectItem.Target>
+                      <uix:TargetAnchorable BrowserURL="https://pcs-uat.professionalcredit.com/clientmaster#section4" CVScreenId="df23cd29-20b7-421e-b437-ec85ab6303ac" CvElementArea="1061, 461, 815, 37" CvType="InputBox" DesignTimeRectangle="1063, 463, 812, 34" DesignTimeScaleFactor="1" ElementType="DropDown" FullSelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl id='cmbReportExport' tag='SELECT' parentid='section4' /&gt;" FuzzySelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl id='cmbReportExport' tag='SELECT' type='' class='form-control clientMasterId disabled' aaname='' /&gt;" Guid="704f3549-934e-4ed5-a173-a54ba4a5612f" ImageBase64="" InformativeScreenshot="e93ce0f52eba7aade1292b3088eef96c.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ARTrail [PCS]' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V3" Visibility="Interactive" WaitForReadyArgument="Complete">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target CVScreenId="df23cd29-20b7-421e-b437-ec85ab6303ac" CvTextArea="1073, 443, 65, 14" CvTextArgument="Export Type" CvType="Text" DesignTimeRectangle="1069, 441, 73, 18" ElementType="Text" FullSelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl aaname='Export Type ' parentid='section4' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl aaname='Export Type ' parentid='section4' tag='LABEL' type='' class='' check:innerText='Export Type' /&gt;" Guid="9f909692-4b98-4ec7-9cac-7fc58b10b991" SearchSteps="FuzzySelector, CV" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NSelectItem.Target>
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <If.Then>
-                      <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,270" sap2010:WorkflowViewState.IdRef="Sequence_11">
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                        <uix:NSelectItem DisplayName="Select Item 'Export Type'" sap:VirtualizedContainerService.HintSize="354,182" sap2010:WorkflowViewState.IdRef="NSelectItem_8" Item="Archive" ScopeIdentifier="85332b24-ecfd-4007-a523-26f8fa30724f" Version="V3">
-                          <uix:NSelectItem.Items>
-                            <scg:List x:TypeArguments="x:String" Capacity="4">
-                              <x:String>Select</x:String>
-                              <x:String>Archive</x:String>
-                              <x:String>Email</x:String>
-                              <x:String>Print</x:String>
-                            </scg:List>
-                          </uix:NSelectItem.Items>
-                          <uix:NSelectItem.Target>
-                            <uix:TargetAnchorable BrowserURL="https://pcs-uat.professionalcredit.com/clientmaster#section4" CVScreenId="df23cd29-20b7-421e-b437-ec85ab6303ac" CvElementArea="1061, 461, 815, 37" CvType="InputBox" DesignTimeRectangle="1063, 463, 812, 34" DesignTimeScaleFactor="1" ElementType="DropDown" FullSelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl id='cmbReportExport' tag='SELECT' parentid='section4' /&gt;" FuzzySelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl id='cmbReportExport' tag='SELECT' type='' class='form-control clientMasterId disabled' aaname='' /&gt;" Guid="704f3549-934e-4ed5-a173-a54ba4a5612f" ImageBase64="" InformativeScreenshot="e93ce0f52eba7aade1292b3088eef96c.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ARTrail [PCS]' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V3" Visibility="Interactive" WaitForReadyArgument="Complete">
-                              <uix:TargetAnchorable.Anchors>
-                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                  <uix:Target CVScreenId="df23cd29-20b7-421e-b437-ec85ab6303ac" CvTextArea="1073, 443, 65, 14" CvTextArgument="Export Type" CvType="Text" DesignTimeRectangle="1069, 441, 73, 18" ElementType="Text" FullSelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl aaname='Export Type ' parentid='section4' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl aaname='Export Type ' parentid='section4' tag='LABEL' type='' class='' check:innerText='Export Type' /&gt;" Guid="9f909692-4b98-4ec7-9cac-7fc58b10b991" SearchSteps="FuzzySelector, CV" />
-                                </scg:List>
-                              </uix:TargetAnchorable.Anchors>
-                            </uix:TargetAnchorable>
-                          </uix:NSelectItem.Target>
-                          <sap:WorkflowViewStateService.ViewState>
-                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                            </scg:Dictionary>
-                          </sap:WorkflowViewStateService.ViewState>
-                        </uix:NSelectItem>
-                      </Sequence>
-                    </If.Then>
-                    <If.Else>
-                      <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,270" sap2010:WorkflowViewState.IdRef="Sequence_12">
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                        <uix:NSelectItem DisplayName="Select Item 'Export Type'" sap:VirtualizedContainerService.HintSize="354,182" sap2010:WorkflowViewState.IdRef="NSelectItem_9" Item="[Fncl_Config(&quot;Export Type&quot;).ToString]" ScopeIdentifier="85332b24-ecfd-4007-a523-26f8fa30724f" Version="V3">
-                          <uix:NSelectItem.Items>
-                            <scg:List x:TypeArguments="x:String" Capacity="4">
-                              <x:String>Select</x:String>
-                              <x:String>Archive</x:String>
-                              <x:String>Email</x:String>
-                              <x:String>Print</x:String>
-                            </scg:List>
-                          </uix:NSelectItem.Items>
-                          <uix:NSelectItem.Target>
-                            <uix:TargetAnchorable BrowserURL="https://pcs-uat.professionalcredit.com/clientmaster#section4" CVScreenId="df23cd29-20b7-421e-b437-ec85ab6303ac" CvElementArea="1061, 461, 815, 37" CvType="InputBox" DesignTimeRectangle="1063, 463, 812, 34" DesignTimeScaleFactor="1" ElementType="DropDown" FullSelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl id='cmbReportExport' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl id='cmbReportExport' tag='SELECT' type='' class='form-control clientMasterId disabled' aaname='' /&gt;" Guid="704f3549-934e-4ed5-a173-a54ba4a5612f" ImageBase64="" InformativeScreenshot="e93ce0f52eba7aade1292b3088eef96c.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ARTrail [PCS]' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V3" Visibility="Interactive" WaitForReadyArgument="Complete">
-                              <uix:TargetAnchorable.Anchors>
-                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                  <uix:Target CVScreenId="df23cd29-20b7-421e-b437-ec85ab6303ac" CvTextArea="1073, 443, 65, 14" CvTextArgument="Export Type" CvType="Text" DesignTimeRectangle="1069, 441, 73, 18" ElementType="Text" FullSelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl aaname='Export Type ' parentid='section4' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl aaname='Export Type ' parentid='section4' tag='LABEL' type='' class='' check:innerText='Export Type' /&gt;" Guid="9f909692-4b98-4ec7-9cac-7fc58b10b991" SearchSteps="Selector, FuzzySelector, CV" />
-                                </scg:List>
-                              </uix:TargetAnchorable.Anchors>
-                            </uix:TargetAnchorable>
-                          </uix:NSelectItem.Target>
-                          <sap:WorkflowViewStateService.ViewState>
-                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                            </scg:Dictionary>
-                          </sap:WorkflowViewStateService.ViewState>
-                        </uix:NSelectItem>
-                      </Sequence>
-                    </If.Else>
-                  </If>
-                  <If Condition="[Fncl_Config(&quot;Trust Frequency&quot;).ToString().ToUpper.Contains(&quot;MONTHLY&quot;)]" sap:VirtualizedContainerService.HintSize="354,57.333333333333336" sap2010:WorkflowViewState.IdRef="If_13">
+                  </uix:NSelectItem>
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,270" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NSelectItem DisplayName="Select Item 'Export Type'" sap:VirtualizedContainerService.HintSize="354,182" sap2010:WorkflowViewState.IdRef="NSelectItem_9" Item="[Fncl_Config(&quot;Export Type&quot;).ToString]" ScopeIdentifier="85332b24-ecfd-4007-a523-26f8fa30724f" Version="V3">
+                    <uix:NSelectItem.Items>
+                      <scg:List x:TypeArguments="x:String" Capacity="4">
+                        <x:String>Select</x:String>
+                        <x:String>Archive</x:String>
+                        <x:String>Email</x:String>
+                        <x:String>Print</x:String>
+                      </scg:List>
+                    </uix:NSelectItem.Items>
+                    <uix:NSelectItem.Target>
+                      <uix:TargetAnchorable BrowserURL="https://pcs-uat.professionalcredit.com/clientmaster#section4" CVScreenId="df23cd29-20b7-421e-b437-ec85ab6303ac" CvElementArea="1061, 461, 815, 37" CvType="InputBox" DesignTimeRectangle="1063, 463, 812, 34" DesignTimeScaleFactor="1" ElementType="DropDown" FullSelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl id='cmbReportExport' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl id='cmbReportExport' tag='SELECT' type='' class='form-control clientMasterId disabled' aaname='' /&gt;" Guid="704f3549-934e-4ed5-a173-a54ba4a5612f" ImageBase64="" InformativeScreenshot="e93ce0f52eba7aade1292b3088eef96c.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ARTrail [PCS]' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V3" Visibility="Interactive" WaitForReadyArgument="Complete">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target CVScreenId="df23cd29-20b7-421e-b437-ec85ab6303ac" CvTextArea="1073, 443, 65, 14" CvTextArgument="Export Type" CvType="Text" DesignTimeRectangle="1069, 441, 73, 18" ElementType="Text" FullSelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl aaname='Export Type ' parentid='section4' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl aaname='Export Type ' parentid='section4' tag='LABEL' type='' class='' check:innerText='Export Type' /&gt;" Guid="9f909692-4b98-4ec7-9cac-7fc58b10b991" SearchSteps="Selector, FuzzySelector, CV" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NSelectItem.Target>
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <If.Then>
-                      <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,270" sap2010:WorkflowViewState.IdRef="Sequence_28">
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                        <uix:NSelectItem DisplayName="Select Item 'Trust Frequency'" sap:VirtualizedContainerService.HintSize="354,182" sap2010:WorkflowViewState.IdRef="NSelectItem_19" Item="Monthly" ScopeIdentifier="85332b24-ecfd-4007-a523-26f8fa30724f" Version="V3">
-                          <uix:NSelectItem.Items>
-                            <scg:List x:TypeArguments="x:String" Capacity="8">
-                              <x:String>Select</x:String>
-                              <x:String>Daily</x:String>
-                              <x:String>Weekly</x:String>
-                              <x:String>Bi-Weekly</x:String>
-                              <x:String>Monthly</x:String>
-                              <x:String>MONDAY BEFORE MONTH END</x:String>
-                              <x:String>1ST 3 WEEKS OF MONTH</x:String>
-                              <x:String>1st and 15th of the month</x:String>
-                            </scg:List>
-                          </uix:NSelectItem.Items>
-                          <uix:NSelectItem.Target>
-                            <uix:TargetAnchorable BrowserURL="https://pcs-uat.professionalcredit.com/clientmaster#section4" CVScreenId="fa149826-15a1-4709-abd9-72f71538973e" CvElementArea="217, 523, 536, 37" CvType="InputBox" DesignTimeRectangle="220, 525, 532, 34" DesignTimeScaleFactor="1" ElementType="DropDown" FullSelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl id='cmbTrustFrequency' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl id='cmbTrustFrequency' tag='SELECT' type='' class='form-control clientMasterId disabled' aaname='' /&gt;" Guid="29c41be7-1320-4ca0-928f-c442106e8268" ImageBase64="" InformativeScreenshot="e1fe32f4e51679a093082ec0dd625da3.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ARTrail [PCS]' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V3" Visibility="Interactive">
-                              <uix:TargetAnchorable.Anchors>
-                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                  <uix:Target CVScreenId="fa149826-15a1-4709-abd9-72f71538973e" CvTextArea="230, 506, 88, 14" CvTextArgument="Trust Frequency" CvType="Text" DesignTimeRectangle="226, 504, 97, 18" ElementType="Text" FullSelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl aaname='Trust Frequency ' parentid='section4' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl aaname='Trust Frequency ' parentid='section4' tag='LABEL' type='' class='' check:innerText='Trust Frequency' /&gt;" Guid="d1c930c7-5c1f-452a-8002-98bf2707b570" SearchSteps="FuzzySelector, CV" />
-                                </scg:List>
-                              </uix:TargetAnchorable.Anchors>
-                            </uix:TargetAnchorable>
-                          </uix:NSelectItem.Target>
-                          <sap:WorkflowViewStateService.ViewState>
-                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                            </scg:Dictionary>
-                          </sap:WorkflowViewStateService.ViewState>
-                        </uix:NSelectItem>
-                      </Sequence>
-                    </If.Then>
-                    <If.Else>
-                      <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,270" sap2010:WorkflowViewState.IdRef="Sequence_29">
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                        <uix:NSelectItem DisplayName="Select Item 'Trust Frequency'" sap:VirtualizedContainerService.HintSize="354,182" sap2010:WorkflowViewState.IdRef="NSelectItem_10" Item="[Fncl_Config(&quot;Trust Frequency&quot;).ToString()]" ScopeIdentifier="85332b24-ecfd-4007-a523-26f8fa30724f" Version="V3">
-                          <uix:NSelectItem.Items>
-                            <scg:List x:TypeArguments="x:String" Capacity="8">
-                              <x:String>Select</x:String>
-                              <x:String>Daily</x:String>
-                              <x:String>Weekly</x:String>
-                              <x:String>Bi-Weekly</x:String>
-                              <x:String>Monthly</x:String>
-                              <x:String>MONDAY BEFORE MONTH END</x:String>
-                              <x:String>1ST 3 WEEKS OF MONTH</x:String>
-                              <x:String>1st and 15th of the month</x:String>
-                            </scg:List>
-                          </uix:NSelectItem.Items>
-                          <uix:NSelectItem.Target>
-                            <uix:TargetAnchorable BrowserURL="https://pcs-uat.professionalcredit.com/clientmaster#section4" CVScreenId="fa149826-15a1-4709-abd9-72f71538973e" CvElementArea="217, 523, 536, 37" CvType="InputBox" DesignTimeRectangle="220, 525, 532, 34" DesignTimeScaleFactor="1" ElementType="DropDown" FullSelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl id='cmbTrustFrequency' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl id='cmbTrustFrequency' tag='SELECT' type='' class='form-control clientMasterId disabled' aaname='' /&gt;" Guid="29c41be7-1320-4ca0-928f-c442106e8268" ImageBase64="" InformativeScreenshot="e1fe32f4e51679a093082ec0dd625da3.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ARTrail [PCS]' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V3" Visibility="Interactive">
-                              <uix:TargetAnchorable.Anchors>
-                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                  <uix:Target CVScreenId="fa149826-15a1-4709-abd9-72f71538973e" CvTextArea="230, 506, 88, 14" CvTextArgument="Trust Frequency" CvType="Text" DesignTimeRectangle="226, 504, 97, 18" ElementType="Text" FullSelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl aaname='Trust Frequency ' parentid='section4' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl aaname='Trust Frequency ' parentid='section4' tag='LABEL' type='' class='' check:innerText='Trust Frequency' /&gt;" Guid="d1c930c7-5c1f-452a-8002-98bf2707b570" SearchSteps="FuzzySelector, CV" />
-                                </scg:List>
-                              </uix:TargetAnchorable.Anchors>
-                            </uix:TargetAnchorable>
-                          </uix:NSelectItem.Target>
-                          <sap:WorkflowViewStateService.ViewState>
-                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                            </scg:Dictionary>
-                          </sap:WorkflowViewStateService.ViewState>
-                        </uix:NSelectItem>
-                      </Sequence>
-                    </If.Else>
-                  </If>
-                  <If Condition="[Fncl_Config(&quot;Invoice Frequency&quot;).ToString().ToUpper.Contains(&quot;MONTHLY&quot;)]" sap:VirtualizedContainerService.HintSize="354,57.333333333333336" sap2010:WorkflowViewState.IdRef="If_14">
+                  </uix:NSelectItem>
+                </Sequence>
+              </If.Else>
+            </If>
+            <If Condition="[Fncl_Config(&quot;Trust Frequency&quot;).ToString().ToUpper.Contains(&quot;MONTHLY&quot;)]" sap:VirtualizedContainerService.HintSize="546,712" sap2010:WorkflowViewState.IdRef="If_5">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <If.Then>
+                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,270" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NSelectItem DisplayName="Select Item 'Trust Frequency'" sap:VirtualizedContainerService.HintSize="354,182" sap2010:WorkflowViewState.IdRef="NSelectItem_10" Item="Monthly" ScopeIdentifier="85332b24-ecfd-4007-a523-26f8fa30724f" Version="V3">
+                    <uix:NSelectItem.Items>
+                      <scg:List x:TypeArguments="x:String" Capacity="8">
+                        <x:String>Select</x:String>
+                        <x:String>Daily</x:String>
+                        <x:String>Weekly</x:String>
+                        <x:String>Bi-Weekly</x:String>
+                        <x:String>Monthly</x:String>
+                        <x:String>MONDAY BEFORE MONTH END</x:String>
+                        <x:String>1ST 3 WEEKS OF MONTH</x:String>
+                        <x:String>1st and 15th of the month</x:String>
+                      </scg:List>
+                    </uix:NSelectItem.Items>
+                    <uix:NSelectItem.Target>
+                      <uix:TargetAnchorable BrowserURL="https://pcs-uat.professionalcredit.com/clientmaster#section4" CVScreenId="fa149826-15a1-4709-abd9-72f71538973e" CvElementArea="217, 523, 536, 37" CvType="InputBox" DesignTimeRectangle="220, 525, 532, 34" DesignTimeScaleFactor="1" ElementType="DropDown" FullSelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl id='cmbTrustFrequency' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl id='cmbTrustFrequency' tag='SELECT' type='' class='form-control clientMasterId disabled' aaname='' /&gt;" Guid="29c41be7-1320-4ca0-928f-c442106e8268" ImageBase64="" InformativeScreenshot="e1fe32f4e51679a093082ec0dd625da3.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ARTrail [PCS]' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V3" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target CVScreenId="fa149826-15a1-4709-abd9-72f71538973e" CvTextArea="230, 506, 88, 14" CvTextArgument="Trust Frequency" CvType="Text" DesignTimeRectangle="226, 504, 97, 18" ElementType="Text" FullSelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl aaname='Trust Frequency ' parentid='section4' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl aaname='Trust Frequency ' parentid='section4' tag='LABEL' type='' class='' check:innerText='Trust Frequency' /&gt;" Guid="d1c930c7-5c1f-452a-8002-98bf2707b570" SearchSteps="FuzzySelector, CV" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NSelectItem.Target>
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <If.Then>
-                      <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,270" sap2010:WorkflowViewState.IdRef="Sequence_30">
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                        <uix:NSelectItem DisplayName="Select Item 'Invoice Frequency'" sap:VirtualizedContainerService.HintSize="354,182" sap2010:WorkflowViewState.IdRef="NSelectItem_22" Item="Monthly" ScopeIdentifier="85332b24-ecfd-4007-a523-26f8fa30724f" Version="V3">
-                          <uix:NSelectItem.Items>
-                            <scg:List x:TypeArguments="x:String" Capacity="5">
-                              <x:String>Select</x:String>
-                              <x:String>Weekly</x:String>
-                              <x:String>Monthly</x:String>
-                              <x:String>Bi-Monthly</x:String>
-                              <x:String>Daily</x:String>
-                            </scg:List>
-                          </uix:NSelectItem.Items>
-                          <uix:NSelectItem.Target>
-                            <uix:TargetAnchorable BrowserURL="https://pcs-uat.professionalcredit.com/clientmaster#section4" CVScreenId="37af75e2-b63f-45bf-a27d-389fea331b72" CvElementArea="779, 523, 537, 37" CvType="InputBox" DesignTimeRectangle="782, 525, 531, 34" DesignTimeScaleFactor="1" ElementType="DropDown" FullSelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl id='cmbinvoiceFreq' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl id='cmbinvoiceFreq' tag='SELECT' type='' class='form-control clientMasterId disabled' aaname='' /&gt;" Guid="852adcd2-c4cb-4c4e-87f2-3f4d18f7c968" InformativeScreenshot="ffaa5a58f323aa0e3ee91ab69529af74.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ARTrail [PCS]' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V3" Visibility="Interactive" WaitForReadyArgument="Complete">
-                              <uix:TargetAnchorable.Anchors>
-                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                  <uix:Target CVScreenId="37af75e2-b63f-45bf-a27d-389fea331b72" CvTextArea="792, 506, 99, 14" CvTextArgument="Invoice Frequency" CvType="Text" DesignTimeRectangle="788, 504, 108, 18" ElementType="Text" FullSelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl aaname='Invoice Frequency' parentid='section4' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl aaname='Invoice Frequency' parentid='section4' tag='LABEL' type='' class='' check:innerText='Invoice Frequency' /&gt;" Guid="9cc0bbcf-8492-47e5-ab52-e74264e62256" SearchSteps="Selector, FuzzySelector, CV" />
-                                </scg:List>
-                              </uix:TargetAnchorable.Anchors>
-                            </uix:TargetAnchorable>
-                          </uix:NSelectItem.Target>
-                          <sap:WorkflowViewStateService.ViewState>
-                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                            </scg:Dictionary>
-                          </sap:WorkflowViewStateService.ViewState>
-                        </uix:NSelectItem>
-                      </Sequence>
-                    </If.Then>
-                    <If.Else>
-                      <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,270" sap2010:WorkflowViewState.IdRef="Sequence_31">
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                        <uix:NSelectItem DisplayName="Select Item 'Invoice Frequency'" sap:VirtualizedContainerService.HintSize="354,182" sap2010:WorkflowViewState.IdRef="NSelectItem_11" Item="[Fncl_Config(&quot;Invoice Frequency&quot;).ToString()]" ScopeIdentifier="85332b24-ecfd-4007-a523-26f8fa30724f" Version="V3">
-                          <uix:NSelectItem.Items>
-                            <scg:List x:TypeArguments="x:String" Capacity="5">
-                              <x:String>Select</x:String>
-                              <x:String>Weekly</x:String>
-                              <x:String>Monthly</x:String>
-                              <x:String>Bi-Monthly</x:String>
-                              <x:String>Daily</x:String>
-                            </scg:List>
-                          </uix:NSelectItem.Items>
-                          <uix:NSelectItem.Target>
-                            <uix:TargetAnchorable BrowserURL="https://pcs-uat.professionalcredit.com/clientmaster#section4" CVScreenId="37af75e2-b63f-45bf-a27d-389fea331b72" CvElementArea="779, 523, 537, 37" CvType="InputBox" DesignTimeRectangle="782, 525, 531, 34" DesignTimeScaleFactor="1" ElementType="DropDown" FullSelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl id='cmbinvoiceFreq' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl id='cmbinvoiceFreq' tag='SELECT' type='' class='form-control clientMasterId disabled' aaname='' /&gt;" Guid="852adcd2-c4cb-4c4e-87f2-3f4d18f7c968" InformativeScreenshot="ffaa5a58f323aa0e3ee91ab69529af74.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ARTrail [PCS]' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V3" Visibility="Interactive" WaitForReadyArgument="Complete">
-                              <uix:TargetAnchorable.Anchors>
-                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                  <uix:Target CVScreenId="37af75e2-b63f-45bf-a27d-389fea331b72" CvTextArea="792, 506, 99, 14" CvTextArgument="Invoice Frequency" CvType="Text" DesignTimeRectangle="788, 504, 108, 18" ElementType="Text" FullSelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl aaname='Invoice Frequency' parentid='section4' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl aaname='Invoice Frequency' parentid='section4' tag='LABEL' type='' class='' check:innerText='Invoice Frequency' /&gt;" Guid="9cc0bbcf-8492-47e5-ab52-e74264e62256" SearchSteps="Selector, FuzzySelector, CV" />
-                                </scg:List>
-                              </uix:TargetAnchorable.Anchors>
-                            </uix:TargetAnchorable>
-                          </uix:NSelectItem.Target>
-                          <sap:WorkflowViewStateService.ViewState>
-                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                            </scg:Dictionary>
-                          </sap:WorkflowViewStateService.ViewState>
-                        </uix:NSelectItem>
-                      </Sequence>
-                    </If.Else>
-                  </If>
-                  <If Condition="[Fncl_Config(&quot;Trust Receipt Method&quot;).ToString().ToUpper.Contains(&quot;NONE&quot;)]" sap:VirtualizedContainerService.HintSize="354,57.333333333333336" sap2010:WorkflowViewState.IdRef="If_5">
+                  </uix:NSelectItem>
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,270" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NSelectItem DisplayName="Select Item 'Trust Frequency'" sap:VirtualizedContainerService.HintSize="354,182" sap2010:WorkflowViewState.IdRef="NSelectItem_11" Item="[Fncl_Config(&quot;Trust Frequency&quot;).ToString()]" ScopeIdentifier="85332b24-ecfd-4007-a523-26f8fa30724f" Version="V3">
+                    <uix:NSelectItem.Items>
+                      <scg:List x:TypeArguments="x:String" Capacity="8">
+                        <x:String>Select</x:String>
+                        <x:String>Daily</x:String>
+                        <x:String>Weekly</x:String>
+                        <x:String>Bi-Weekly</x:String>
+                        <x:String>Monthly</x:String>
+                        <x:String>MONDAY BEFORE MONTH END</x:String>
+                        <x:String>1ST 3 WEEKS OF MONTH</x:String>
+                        <x:String>1st and 15th of the month</x:String>
+                      </scg:List>
+                    </uix:NSelectItem.Items>
+                    <uix:NSelectItem.Target>
+                      <uix:TargetAnchorable BrowserURL="https://pcs-uat.professionalcredit.com/clientmaster#section4" CVScreenId="fa149826-15a1-4709-abd9-72f71538973e" CvElementArea="217, 523, 536, 37" CvType="InputBox" DesignTimeRectangle="220, 525, 532, 34" DesignTimeScaleFactor="1" ElementType="DropDown" FullSelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl id='cmbTrustFrequency' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl id='cmbTrustFrequency' tag='SELECT' type='' class='form-control clientMasterId disabled' aaname='' /&gt;" Guid="29c41be7-1320-4ca0-928f-c442106e8268" ImageBase64="" InformativeScreenshot="e1fe32f4e51679a093082ec0dd625da3.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ARTrail [PCS]' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V3" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target CVScreenId="fa149826-15a1-4709-abd9-72f71538973e" CvTextArea="230, 506, 88, 14" CvTextArgument="Trust Frequency" CvType="Text" DesignTimeRectangle="226, 504, 97, 18" ElementType="Text" FullSelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl aaname='Trust Frequency ' parentid='section4' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl aaname='Trust Frequency ' parentid='section4' tag='LABEL' type='' class='' check:innerText='Trust Frequency' /&gt;" Guid="d1c930c7-5c1f-452a-8002-98bf2707b570" SearchSteps="FuzzySelector, CV" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NSelectItem.Target>
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <If.Then>
-                      <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,270" sap2010:WorkflowViewState.IdRef="Sequence_13">
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                        <uix:NSelectItem DisplayName="Select Item 'Trust Receipt Method'" sap:VirtualizedContainerService.HintSize="354,182" sap2010:WorkflowViewState.IdRef="NSelectItem_13" Item="None" ScopeIdentifier="85332b24-ecfd-4007-a523-26f8fa30724f" Version="V3">
-                          <uix:NSelectItem.Items>
-                            <scg:List x:TypeArguments="x:String" Capacity="4">
-                              <x:String>None</x:String>
-                              <x:String>Special Projects</x:String>
-                              <x:String>Internal Clients</x:String>
-                              <x:String>Special Invoicing Only</x:String>
-                            </scg:List>
-                          </uix:NSelectItem.Items>
-                          <uix:NSelectItem.Target>
-                            <uix:TargetAnchorable BrowserURL="https://pcs-uat.professionalcredit.com/clientmaster#section4" DesignTimeRectangle="782, 488, 531, 34" DesignTimeScaleFactor="1" ElementType="DropDown" FullSelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl id='cmbtrustreceiptMthd' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl id='cmbtrustreceiptMthd' tag='SELECT' type='' class='form-control clientMasterId disabled' aaname='' /&gt;" Guid="b4feb20a-62e5-4ccc-b4f6-c7a8086d67f0" ImageBase64="" InformativeScreenshot="9ae4932a3a9bd8c653242a614e9f5e94.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ARTrail [PCS]' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V3" Visibility="Interactive" WaitForReadyArgument="Complete">
-                              <uix:TargetAnchorable.Anchors>
-                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                  <uix:Target DesignTimeRectangle="788, 467, 124, 18" ElementType="Text" FullSelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl aaname=' Trust Receipt Method ' parentid='section4' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl aaname=' Trust Receipt Method ' parentid='section4' tag='LABEL' type='' class='' check:innerText='Trust Receipt Method' /&gt;" Guid="2949da1e-e2bd-49df-9827-5111d87fc983" SearchSteps="Selector, FuzzySelector" />
-                                </scg:List>
-                              </uix:TargetAnchorable.Anchors>
-                            </uix:TargetAnchorable>
-                          </uix:NSelectItem.Target>
-                        </uix:NSelectItem>
-                      </Sequence>
-                    </If.Then>
-                    <If.Else>
-                      <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,270" sap2010:WorkflowViewState.IdRef="Sequence_14">
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                        <uix:NSelectItem DisplayName="Select Item 'Trust Receipt Method'" sap:VirtualizedContainerService.HintSize="354,182" sap2010:WorkflowViewState.IdRef="NSelectItem_12" Item="[Fncl_Config(&quot;Trust Receipt Method&quot;).ToString()]" ScopeIdentifier="85332b24-ecfd-4007-a523-26f8fa30724f" Version="V3">
-                          <uix:NSelectItem.Items>
-                            <scg:List x:TypeArguments="x:String" Capacity="4">
-                              <x:String>None</x:String>
-                              <x:String>Special Projects</x:String>
-                              <x:String>Internal Clients</x:String>
-                              <x:String>Special Invoicing Only</x:String>
-                            </scg:List>
-                          </uix:NSelectItem.Items>
-                          <uix:NSelectItem.Target>
-                            <uix:TargetAnchorable BrowserURL="https://pcs-uat.professionalcredit.com/clientmaster#section4" DesignTimeRectangle="782, 488, 531, 34" DesignTimeScaleFactor="1" ElementType="DropDown" FullSelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl id='cmbtrustreceiptMthd' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl id='cmbtrustreceiptMthd' tag='SELECT' type='' class='form-control clientMasterId disabled' aaname='' /&gt;" Guid="b4feb20a-62e5-4ccc-b4f6-c7a8086d67f0" ImageBase64="" InformativeScreenshot="9ae4932a3a9bd8c653242a614e9f5e94.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ARTrail [PCS]' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V3" Visibility="Interactive" WaitForReadyArgument="Complete">
-                              <uix:TargetAnchorable.Anchors>
-                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                  <uix:Target DesignTimeRectangle="788, 467, 124, 18" ElementType="Text" FullSelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl aaname=' Trust Receipt Method ' parentid='section4' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl aaname=' Trust Receipt Method ' parentid='section4' tag='LABEL' type='' class='' check:innerText='Trust Receipt Method' /&gt;" Guid="2949da1e-e2bd-49df-9827-5111d87fc983" SearchSteps="Selector, FuzzySelector" />
-                                </scg:List>
-                              </uix:TargetAnchorable.Anchors>
-                            </uix:TargetAnchorable>
-                          </uix:NSelectItem.Target>
-                        </uix:NSelectItem>
-                      </Sequence>
-                    </If.Else>
-                  </If>
-                  <If Condition="[Fncl_Config(&quot;ACH Remit?&quot;).ToString().ToUpper.Contains(&quot;YES&quot;)]" sap:VirtualizedContainerService.HintSize="354,57.333333333333336" sap2010:WorkflowViewState.IdRef="If_6">
+                  </uix:NSelectItem>
+                </Sequence>
+              </If.Else>
+            </If>
+            <If Condition="[Fncl_Config(&quot;Invoice Frequency&quot;).ToString().ToUpper.Contains(&quot;MONTHLY&quot;)]" sap:VirtualizedContainerService.HintSize="546,712" sap2010:WorkflowViewState.IdRef="If_6">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <If.Then>
+                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,270" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NSelectItem DisplayName="Select Item 'Invoice Frequency'" sap:VirtualizedContainerService.HintSize="354,182" sap2010:WorkflowViewState.IdRef="NSelectItem_12" Item="Monthly" ScopeIdentifier="85332b24-ecfd-4007-a523-26f8fa30724f" Version="V3">
+                    <uix:NSelectItem.Items>
+                      <scg:List x:TypeArguments="x:String" Capacity="5">
+                        <x:String>Select</x:String>
+                        <x:String>Weekly</x:String>
+                        <x:String>Monthly</x:String>
+                        <x:String>Bi-Monthly</x:String>
+                        <x:String>Daily</x:String>
+                      </scg:List>
+                    </uix:NSelectItem.Items>
+                    <uix:NSelectItem.Target>
+                      <uix:TargetAnchorable BrowserURL="https://pcs-uat.professionalcredit.com/clientmaster#section4" CVScreenId="37af75e2-b63f-45bf-a27d-389fea331b72" CvElementArea="779, 523, 537, 37" CvType="InputBox" DesignTimeRectangle="782, 525, 531, 34" DesignTimeScaleFactor="1" ElementType="DropDown" FullSelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl id='cmbinvoiceFreq' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl id='cmbinvoiceFreq' tag='SELECT' type='' class='form-control clientMasterId disabled' aaname='' /&gt;" Guid="852adcd2-c4cb-4c4e-87f2-3f4d18f7c968" InformativeScreenshot="ffaa5a58f323aa0e3ee91ab69529af74.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ARTrail [PCS]' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V3" Visibility="Interactive" WaitForReadyArgument="Complete">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target CVScreenId="37af75e2-b63f-45bf-a27d-389fea331b72" CvTextArea="792, 506, 99, 14" CvTextArgument="Invoice Frequency" CvType="Text" DesignTimeRectangle="788, 504, 108, 18" ElementType="Text" FullSelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl aaname='Invoice Frequency' parentid='section4' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl aaname='Invoice Frequency' parentid='section4' tag='LABEL' type='' class='' check:innerText='Invoice Frequency' /&gt;" Guid="9cc0bbcf-8492-47e5-ab52-e74264e62256" SearchSteps="Selector, FuzzySelector, CV" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NSelectItem.Target>
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <If.Then>
-                      <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,308" sap2010:WorkflowViewState.IdRef="Sequence_15">
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'InputBox'" sap:VirtualizedContainerService.HintSize="354,220" sap2010:WorkflowViewState.IdRef="NClick_7" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="85332b24-ecfd-4007-a523-26f8fa30724f" Version="V3">
-                          <uix:NClick.Target>
-                            <uix:TargetAnchorable BrowserURL="https://pcs-uat.professionalcredit.com/clientmaster#section4" DesignTimeRectangle="1356, 493, 16, 18" DesignTimeScaleFactor="1" ElementType="CheckBox" FullSelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl id='chkACHRemit' tag='INPUT' aaname=' ACH Remit? ' parentid='section4' type='checkbox' /&gt;" FuzzySelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl id='chkACHRemit' tag='INPUT' type='checkbox' class='custom-control-input clientMasterId' aaname=' ACH Remit? ' /&gt;" Guid="146b01b8-81ff-4a9f-a01d-0b34e1940ff2" InformativeScreenshot="25f528f304e64086c9abbdcc6e0b7179.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ARTrail [PCS]' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V3" Visibility="Interactive" WaitForReadyArgument="Complete">
-                              <uix:TargetAnchorable.Anchors>
-                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                  <uix:Target CVScreenId="76539ecf-ed3b-4af7-b21f-eaa1d8ded265" CvElementArea="1342, 486, 535, 36" CvType="InputBox" DesignTimeRectangle="1380, 493, 76, 24" ElementType="Text" FullSelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl aaname=' ACH Remit? ' class='custom-control-label' parentid='section4' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl aaname=' ACH Remit? ' class='custom-control-label' parentid='section4' tag='LABEL' type='' check:innerText='ACH Remit?' /&gt;" Guid="269f2ef6-493d-498f-94dd-ce26a3e154d7" SearchSteps="Selector, FuzzySelector, CV" />
-                                </scg:List>
-                              </uix:TargetAnchorable.Anchors>
-                            </uix:TargetAnchorable>
-                          </uix:NClick.Target>
-                          <uix:NClick.VerifyOptions>
-                            <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
-                              <uix:VerifyExecutionOptions.Retry>
-                                <InArgument x:TypeArguments="x:Boolean" />
-                              </uix:VerifyExecutionOptions.Retry>
-                              <uix:VerifyExecutionOptions.Timeout>
-                                <InArgument x:TypeArguments="x:Double" />
-                              </uix:VerifyExecutionOptions.Timeout>
-                            </uix:VerifyExecutionOptions>
-                          </uix:NClick.VerifyOptions>
-                        </uix:NClick>
-                      </Sequence>
-                    </If.Then>
-                    <If.Else>
-                      <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,104.66666666666667" sap2010:WorkflowViewState.IdRef="Sequence_16">
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                      </Sequence>
-                    </If.Else>
-                  </If>
-                  <If Condition="[Fncl_Config(&quot;Client Specific GL Code&quot;).ToString().ToUpper.Contains(&quot;(PCS)&quot;)]" sap:VirtualizedContainerService.HintSize="354,57.333333333333336" sap2010:WorkflowViewState.IdRef="If_7">
+                  </uix:NSelectItem>
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,270" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NSelectItem DisplayName="Select Item 'Invoice Frequency'" sap:VirtualizedContainerService.HintSize="354,182" sap2010:WorkflowViewState.IdRef="NSelectItem_13" Item="[Fncl_Config(&quot;Invoice Frequency&quot;).ToString()]" ScopeIdentifier="85332b24-ecfd-4007-a523-26f8fa30724f" Version="V3">
+                    <uix:NSelectItem.Items>
+                      <scg:List x:TypeArguments="x:String" Capacity="5">
+                        <x:String>Select</x:String>
+                        <x:String>Weekly</x:String>
+                        <x:String>Monthly</x:String>
+                        <x:String>Bi-Monthly</x:String>
+                        <x:String>Daily</x:String>
+                      </scg:List>
+                    </uix:NSelectItem.Items>
+                    <uix:NSelectItem.Target>
+                      <uix:TargetAnchorable BrowserURL="https://pcs-uat.professionalcredit.com/clientmaster#section4" CVScreenId="37af75e2-b63f-45bf-a27d-389fea331b72" CvElementArea="779, 523, 537, 37" CvType="InputBox" DesignTimeRectangle="782, 525, 531, 34" DesignTimeScaleFactor="1" ElementType="DropDown" FullSelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl id='cmbinvoiceFreq' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl id='cmbinvoiceFreq' tag='SELECT' type='' class='form-control clientMasterId disabled' aaname='' /&gt;" Guid="852adcd2-c4cb-4c4e-87f2-3f4d18f7c968" InformativeScreenshot="ffaa5a58f323aa0e3ee91ab69529af74.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ARTrail [PCS]' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V3" Visibility="Interactive" WaitForReadyArgument="Complete">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target CVScreenId="37af75e2-b63f-45bf-a27d-389fea331b72" CvTextArea="792, 506, 99, 14" CvTextArgument="Invoice Frequency" CvType="Text" DesignTimeRectangle="788, 504, 108, 18" ElementType="Text" FullSelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl aaname='Invoice Frequency' parentid='section4' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl aaname='Invoice Frequency' parentid='section4' tag='LABEL' type='' class='' check:innerText='Invoice Frequency' /&gt;" Guid="9cc0bbcf-8492-47e5-ab52-e74264e62256" SearchSteps="Selector, FuzzySelector, CV" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NSelectItem.Target>
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <If.Then>
-                      <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,270" sap2010:WorkflowViewState.IdRef="Sequence_18">
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                        <uix:NSelectItem DisplayName="Select Item 'Client Specific GL Code'" sap:VirtualizedContainerService.HintSize="354,182" sap2010:WorkflowViewState.IdRef="NSelectItem_15" Item="Trust Account General Client PCS" ScopeIdentifier="85332b24-ecfd-4007-a523-26f8fa30724f" Version="V3">
-                          <uix:NSelectItem.Items>
-                            <scg:List x:TypeArguments="x:String" Capacity="7">
-                              <x:String>Select</x:String>
-                              <x:String>Trust Account State of OR Contract</x:String>
-                              <x:String>Trust Account General Client PCS</x:String>
-                              <x:String>Trust Account Michigan PCS</x:String>
-                              <x:String>TEST</x:String>
-                              <x:String>Trust Account North Carolina CT</x:String>
-                              <x:String>Trust Account Nevada PCS</x:String>
-                            </scg:List>
-                          </uix:NSelectItem.Items>
-                          <uix:NSelectItem.Target>
-                            <uix:TargetAnchorable BrowserURL="https://pcs-uat.professionalcredit.com/clientmaster#section4" CVScreenId="254a2ffa-c582-45d3-a663-2eb9d7b74dcd" CvElementArea="218, 497, 395, 37" CvType="InputBox" DesignTimeRectangle="220, 551, 391, 34" DesignTimeScaleFactor="1" ElementType="DropDown" FullSelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl id='clientspecificglcode' tag='SELECT' parentid='section4' /&gt;" FuzzySelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl id='clientspecificglcode' tag='SELECT' type='' class='form-control clientMasterId disabled' aaname='' /&gt;" Guid="66a0e720-706b-4357-ad1d-0a5176768226" InformativeScreenshot="5bfbbc4d0bce4b76a8ed20c6ef5f3c16.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ARTrail [PCS]' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V3" Visibility="Interactive" WaitForReadyArgument="Complete">
-                              <uix:TargetAnchorable.Anchors>
-                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                  <uix:Target DesignTimeRectangle="226, 529, 137, 18" ElementType="Text" FullSelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl aaname=' Client Specific GL Code ' parentid='section4' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl aaname=' Client Specific GL Code ' parentid='section4' tag='LABEL' type='' class='' check:innerText='Client Specific GL Code' /&gt;" Guid="b6ab1082-9a7d-4662-bdd8-4e25a798c423" SearchSteps="Selector, FuzzySelector" />
-                                </scg:List>
-                              </uix:TargetAnchorable.Anchors>
-                            </uix:TargetAnchorable>
-                          </uix:NSelectItem.Target>
-                        </uix:NSelectItem>
-                      </Sequence>
-                    </If.Then>
-                    <If.Else>
-                      <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,270" sap2010:WorkflowViewState.IdRef="Sequence_19">
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                        <uix:NSelectItem DisplayName="Select Item 'Client Specific GL Code'" sap:VirtualizedContainerService.HintSize="354,182" sap2010:WorkflowViewState.IdRef="NSelectItem_16" Item="[Fncl_Config(&quot;Client Specific GL Code&quot;).ToString()]" ScopeIdentifier="85332b24-ecfd-4007-a523-26f8fa30724f" Version="V3">
-                          <uix:NSelectItem.Items>
-                            <scg:List x:TypeArguments="x:String" Capacity="7">
-                              <x:String>Select</x:String>
-                              <x:String>Trust Account State of OR Contract</x:String>
-                              <x:String>Trust Account General Client PCS</x:String>
-                              <x:String>Trust Account Michigan PCS</x:String>
-                              <x:String>TEST</x:String>
-                              <x:String>Trust Account North Carolina CT</x:String>
-                              <x:String>Trust Account Nevada PCS</x:String>
-                            </scg:List>
-                          </uix:NSelectItem.Items>
-                          <uix:NSelectItem.Target>
-                            <uix:TargetAnchorable BrowserURL="https://pcs-uat.professionalcredit.com/clientmaster#section4" CVScreenId="254a2ffa-c582-45d3-a663-2eb9d7b74dcd" CvElementArea="218, 497, 395, 37" CvType="InputBox" DesignTimeRectangle="220, 551, 391, 34" DesignTimeScaleFactor="1" ElementType="DropDown" FullSelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl id='clientspecificglcode' tag='SELECT' parentid='section4' /&gt;" FuzzySelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl id='clientspecificglcode' tag='SELECT' type='' class='form-control clientMasterId disabled' aaname='' /&gt;" Guid="66a0e720-706b-4357-ad1d-0a5176768226" InformativeScreenshot="5bfbbc4d0bce4b76a8ed20c6ef5f3c16.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ARTrail [PCS]' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V3" Visibility="Interactive" WaitForReadyArgument="Complete">
-                              <uix:TargetAnchorable.Anchors>
-                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                  <uix:Target DesignTimeRectangle="226, 529, 137, 18" ElementType="Text" FullSelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl aaname=' Client Specific GL Code ' parentid='section4' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl aaname=' Client Specific GL Code ' parentid='section4' tag='LABEL' type='' class='' check:innerText='Client Specific GL Code' /&gt;" Guid="b6ab1082-9a7d-4662-bdd8-4e25a798c423" SearchSteps="Selector, FuzzySelector" />
-                                </scg:List>
-                              </uix:TargetAnchorable.Anchors>
-                            </uix:TargetAnchorable>
-                          </uix:NSelectItem.Target>
-                        </uix:NSelectItem>
-                      </Sequence>
-                    </If.Else>
-                  </If>
-                  <If Condition="[Fncl_Config(&quot;Corporate Remittance&quot;).ToString().ToUpper.Equals(&quot;YES&quot;)]" sap:VirtualizedContainerService.HintSize="354,57.333333333333336" sap2010:WorkflowViewState.IdRef="If_8">
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                    <If.Then>
-                      <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,308" sap2010:WorkflowViewState.IdRef="Sequence_20">
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'InputBox'" sap:VirtualizedContainerService.HintSize="354,220" sap2010:WorkflowViewState.IdRef="NClick_8" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="85332b24-ecfd-4007-a523-26f8fa30724f" Version="V3">
-                          <uix:NClick.Target>
-                            <uix:TargetAnchorable BrowserURL="https://pcs-uat.professionalcredit.com/clientmaster#section4" DesignTimeRectangle="233, 619, 16, 18" DesignTimeScaleFactor="1" ElementType="CheckBox" FullSelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl id='chkCorpRemit' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl id='chkCorpRemit' tag='INPUT' type='checkbox' class='custom-control-input clientMasterId' aaname=' Corporate Remittance ' /&gt;" Guid="dae4533e-4ca5-4b40-bc2b-cdd6da060b4c" InformativeScreenshot="5af3c03190b785c50375c198e0aa441c.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ARTrail [PCS]' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V3" Visibility="Interactive" WaitForReadyArgument="Complete">
-                              <uix:TargetAnchorable.Anchors>
-                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                  <uix:Target CVScreenId="5fa8f1b7-e9cb-4ff7-9d07-127f8cf9813a" CvElementArea="219, 613, 393, 37" CvType="InputBox" DesignTimeRectangle="257, 619, 136, 24" ElementType="Text" FullSelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl aaname=' Corporate Remittance ' class='custom-control-label' parentid='section4' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl aaname=' Corporate Remittance ' class='custom-control-label' parentid='section4' tag='LABEL' type='' check:innerText='Corporate Remittance' /&gt;" Guid="51a2aec6-dfae-4e93-8bbc-8cd3c1d40d78" SearchSteps="Selector, FuzzySelector, CV" />
-                                </scg:List>
-                              </uix:TargetAnchorable.Anchors>
-                            </uix:TargetAnchorable>
-                          </uix:NClick.Target>
-                          <uix:NClick.VerifyOptions>
-                            <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
-                              <uix:VerifyExecutionOptions.Retry>
-                                <InArgument x:TypeArguments="x:Boolean" />
-                              </uix:VerifyExecutionOptions.Retry>
-                              <uix:VerifyExecutionOptions.Timeout>
-                                <InArgument x:TypeArguments="x:Double" />
-                              </uix:VerifyExecutionOptions.Timeout>
-                            </uix:VerifyExecutionOptions>
-                          </uix:NClick.VerifyOptions>
-                        </uix:NClick>
-                      </Sequence>
-                    </If.Then>
-                    <If.Else>
-                      <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,104.66666666666667" sap2010:WorkflowViewState.IdRef="Sequence_21">
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                      </Sequence>
-                    </If.Else>
-                  </If>
-                  <uix:NSelectItem DisplayName="Select Item 'Trust Group'" sap:VirtualizedContainerService.HintSize="354,57.333333333333336" sap2010:WorkflowViewState.IdRef="NSelectItem_17" Item="[Fncl_Config(&quot;Trust Group&quot;).ToString]" ScopeIdentifier="85332b24-ecfd-4007-a523-26f8fa30724f" Version="V3">
+                  </uix:NSelectItem>
+                </Sequence>
+              </If.Else>
+            </If>
+            <If Condition="[Fncl_Config(&quot;Trust Receipt Method&quot;).ToString().ToUpper.Contains(&quot;NONE&quot;)]" sap:VirtualizedContainerService.HintSize="546,712" sap2010:WorkflowViewState.IdRef="If_7">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <If.Then>
+                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,270" sap2010:WorkflowViewState.IdRef="Sequence_19">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NSelectItem DisplayName="Select Item 'Trust Receipt Method'" sap:VirtualizedContainerService.HintSize="354,182" sap2010:WorkflowViewState.IdRef="NSelectItem_14" Item="None" ScopeIdentifier="85332b24-ecfd-4007-a523-26f8fa30724f" Version="V3">
+                    <uix:NSelectItem.Items>
+                      <scg:List x:TypeArguments="x:String" Capacity="4">
+                        <x:String>None</x:String>
+                        <x:String>Special Projects</x:String>
+                        <x:String>Internal Clients</x:String>
+                        <x:String>Special Invoicing Only</x:String>
+                      </scg:List>
+                    </uix:NSelectItem.Items>
+                    <uix:NSelectItem.Target>
+                      <uix:TargetAnchorable BrowserURL="https://pcs-uat.professionalcredit.com/clientmaster#section4" DesignTimeRectangle="782, 488, 531, 34" DesignTimeScaleFactor="1" ElementType="DropDown" FullSelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl id='cmbtrustreceiptMthd' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl id='cmbtrustreceiptMthd' tag='SELECT' type='' class='form-control clientMasterId disabled' aaname='' /&gt;" Guid="b4feb20a-62e5-4ccc-b4f6-c7a8086d67f0" ImageBase64="" InformativeScreenshot="9ae4932a3a9bd8c653242a614e9f5e94.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ARTrail [PCS]' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V3" Visibility="Interactive" WaitForReadyArgument="Complete">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target DesignTimeRectangle="788, 467, 124, 18" ElementType="Text" FullSelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl aaname=' Trust Receipt Method ' parentid='section4' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl aaname=' Trust Receipt Method ' parentid='section4' tag='LABEL' type='' class='' check:innerText='Trust Receipt Method' /&gt;" Guid="2949da1e-e2bd-49df-9827-5111d87fc983" SearchSteps="Selector, FuzzySelector" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NSelectItem.Target>
+                  </uix:NSelectItem>
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,270" sap2010:WorkflowViewState.IdRef="Sequence_20">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NSelectItem DisplayName="Select Item 'Trust Receipt Method'" sap:VirtualizedContainerService.HintSize="354,182" sap2010:WorkflowViewState.IdRef="NSelectItem_15" Item="[Fncl_Config(&quot;Trust Receipt Method&quot;).ToString()]" ScopeIdentifier="85332b24-ecfd-4007-a523-26f8fa30724f" Version="V3">
+                    <uix:NSelectItem.Items>
+                      <scg:List x:TypeArguments="x:String" Capacity="4">
+                        <x:String>None</x:String>
+                        <x:String>Special Projects</x:String>
+                        <x:String>Internal Clients</x:String>
+                        <x:String>Special Invoicing Only</x:String>
+                      </scg:List>
+                    </uix:NSelectItem.Items>
+                    <uix:NSelectItem.Target>
+                      <uix:TargetAnchorable BrowserURL="https://pcs-uat.professionalcredit.com/clientmaster#section4" DesignTimeRectangle="782, 488, 531, 34" DesignTimeScaleFactor="1" ElementType="DropDown" FullSelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl id='cmbtrustreceiptMthd' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl id='cmbtrustreceiptMthd' tag='SELECT' type='' class='form-control clientMasterId disabled' aaname='' /&gt;" Guid="b4feb20a-62e5-4ccc-b4f6-c7a8086d67f0" ImageBase64="" InformativeScreenshot="9ae4932a3a9bd8c653242a614e9f5e94.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ARTrail [PCS]' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V3" Visibility="Interactive" WaitForReadyArgument="Complete">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target DesignTimeRectangle="788, 467, 124, 18" ElementType="Text" FullSelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl aaname=' Trust Receipt Method ' parentid='section4' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl aaname=' Trust Receipt Method ' parentid='section4' tag='LABEL' type='' class='' check:innerText='Trust Receipt Method' /&gt;" Guid="2949da1e-e2bd-49df-9827-5111d87fc983" SearchSteps="Selector, FuzzySelector" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NSelectItem.Target>
+                  </uix:NSelectItem>
+                </Sequence>
+              </If.Else>
+            </If>
+            <If Condition="[Fncl_Config(&quot;ACH Remit?&quot;).ToString().ToUpper.Contains(&quot;YES&quot;)]" sap:VirtualizedContainerService.HintSize="546,584.6666666666666" sap2010:WorkflowViewState.IdRef="If_8">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <If.Then>
+                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,308" sap2010:WorkflowViewState.IdRef="Sequence_21">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'InputBox'" sap:VirtualizedContainerService.HintSize="354,220" sap2010:WorkflowViewState.IdRef="NClick_6" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="85332b24-ecfd-4007-a523-26f8fa30724f" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://pcs-uat.professionalcredit.com/clientmaster#section4" DesignTimeRectangle="1356, 493, 16, 18" DesignTimeScaleFactor="1" ElementType="CheckBox" FullSelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl id='chkACHRemit' tag='INPUT' aaname=' ACH Remit? ' parentid='section4' type='checkbox' /&gt;" FuzzySelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl id='chkACHRemit' tag='INPUT' type='checkbox' class='custom-control-input clientMasterId' aaname=' ACH Remit? ' /&gt;" Guid="146b01b8-81ff-4a9f-a01d-0b34e1940ff2" InformativeScreenshot="25f528f304e64086c9abbdcc6e0b7179.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ARTrail [PCS]' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V3" Visibility="Interactive" WaitForReadyArgument="Complete">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target CVScreenId="76539ecf-ed3b-4af7-b21f-eaa1d8ded265" CvElementArea="1342, 486, 535, 36" CvType="InputBox" DesignTimeRectangle="1380, 493, 76, 24" ElementType="Text" FullSelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl aaname=' ACH Remit? ' class='custom-control-label' parentid='section4' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl aaname=' ACH Remit? ' class='custom-control-label' parentid='section4' tag='LABEL' type='' check:innerText='ACH Remit?' /&gt;" Guid="269f2ef6-493d-498f-94dd-ce26a3e154d7" SearchSteps="Selector, FuzzySelector, CV" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NClick.Target>
+                    <uix:NClick.VerifyOptions>
+                      <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                        <uix:VerifyExecutionOptions.Retry>
+                          <InArgument x:TypeArguments="x:Boolean" />
+                        </uix:VerifyExecutionOptions.Retry>
+                        <uix:VerifyExecutionOptions.Timeout>
+                          <InArgument x:TypeArguments="x:Double" />
+                        </uix:VerifyExecutionOptions.Timeout>
+                      </uix:VerifyExecutionOptions>
+                    </uix:NClick.VerifyOptions>
+                  </uix:NClick>
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,104.66666666666667" sap2010:WorkflowViewState.IdRef="Sequence_22">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
+              </If.Else>
+            </If>
+            <If Condition="[Fncl_Config(&quot;Client Specific GL Code&quot;).ToString().ToUpper.Contains(&quot;(PCS)&quot;)]" sap:VirtualizedContainerService.HintSize="546,712" sap2010:WorkflowViewState.IdRef="If_9">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <If.Then>
+                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,270" sap2010:WorkflowViewState.IdRef="Sequence_23">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NSelectItem DisplayName="Select Item 'Client Specific GL Code'" sap:VirtualizedContainerService.HintSize="354,182" sap2010:WorkflowViewState.IdRef="NSelectItem_16" Item="Trust Account General Client PCS" ScopeIdentifier="85332b24-ecfd-4007-a523-26f8fa30724f" Version="V3">
+                    <uix:NSelectItem.Items>
+                      <scg:List x:TypeArguments="x:String" Capacity="7">
+                        <x:String>Select</x:String>
+                        <x:String>Trust Account State of OR Contract</x:String>
+                        <x:String>Trust Account General Client PCS</x:String>
+                        <x:String>Trust Account Michigan PCS</x:String>
+                        <x:String>TEST</x:String>
+                        <x:String>Trust Account North Carolina CT</x:String>
+                        <x:String>Trust Account Nevada PCS</x:String>
+                      </scg:List>
+                    </uix:NSelectItem.Items>
+                    <uix:NSelectItem.Target>
+                      <uix:TargetAnchorable BrowserURL="https://pcs-uat.professionalcredit.com/clientmaster#section4" CVScreenId="254a2ffa-c582-45d3-a663-2eb9d7b74dcd" CvElementArea="218, 497, 395, 37" CvType="InputBox" DesignTimeRectangle="220, 551, 391, 34" DesignTimeScaleFactor="1" ElementType="DropDown" FullSelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl id='clientspecificglcode' tag='SELECT' parentid='section4' /&gt;" FuzzySelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl id='clientspecificglcode' tag='SELECT' type='' class='form-control clientMasterId disabled' aaname='' /&gt;" Guid="66a0e720-706b-4357-ad1d-0a5176768226" InformativeScreenshot="5bfbbc4d0bce4b76a8ed20c6ef5f3c16.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ARTrail [PCS]' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V3" Visibility="Interactive" WaitForReadyArgument="Complete">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target DesignTimeRectangle="226, 529, 137, 18" ElementType="Text" FullSelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl aaname=' Client Specific GL Code ' parentid='section4' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl aaname=' Client Specific GL Code ' parentid='section4' tag='LABEL' type='' class='' check:innerText='Client Specific GL Code' /&gt;" Guid="b6ab1082-9a7d-4662-bdd8-4e25a798c423" SearchSteps="Selector, FuzzySelector" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NSelectItem.Target>
+                  </uix:NSelectItem>
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,270" sap2010:WorkflowViewState.IdRef="Sequence_24">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NSelectItem DisplayName="Select Item 'Client Specific GL Code'" sap:VirtualizedContainerService.HintSize="354,182" sap2010:WorkflowViewState.IdRef="NSelectItem_17" Item="[Fncl_Config(&quot;Client Specific GL Code&quot;).ToString()]" ScopeIdentifier="85332b24-ecfd-4007-a523-26f8fa30724f" Version="V3">
+                    <uix:NSelectItem.Items>
+                      <scg:List x:TypeArguments="x:String" Capacity="7">
+                        <x:String>Select</x:String>
+                        <x:String>Trust Account State of OR Contract</x:String>
+                        <x:String>Trust Account General Client PCS</x:String>
+                        <x:String>Trust Account Michigan PCS</x:String>
+                        <x:String>TEST</x:String>
+                        <x:String>Trust Account North Carolina CT</x:String>
+                        <x:String>Trust Account Nevada PCS</x:String>
+                      </scg:List>
+                    </uix:NSelectItem.Items>
+                    <uix:NSelectItem.Target>
+                      <uix:TargetAnchorable BrowserURL="https://pcs-uat.professionalcredit.com/clientmaster#section4" CVScreenId="254a2ffa-c582-45d3-a663-2eb9d7b74dcd" CvElementArea="218, 497, 395, 37" CvType="InputBox" DesignTimeRectangle="220, 551, 391, 34" DesignTimeScaleFactor="1" ElementType="DropDown" FullSelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl id='clientspecificglcode' tag='SELECT' parentid='section4' /&gt;" FuzzySelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl id='clientspecificglcode' tag='SELECT' type='' class='form-control clientMasterId disabled' aaname='' /&gt;" Guid="66a0e720-706b-4357-ad1d-0a5176768226" InformativeScreenshot="5bfbbc4d0bce4b76a8ed20c6ef5f3c16.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ARTrail [PCS]' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V3" Visibility="Interactive" WaitForReadyArgument="Complete">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target DesignTimeRectangle="226, 529, 137, 18" ElementType="Text" FullSelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl aaname=' Client Specific GL Code ' parentid='section4' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl aaname=' Client Specific GL Code ' parentid='section4' tag='LABEL' type='' class='' check:innerText='Client Specific GL Code' /&gt;" Guid="b6ab1082-9a7d-4662-bdd8-4e25a798c423" SearchSteps="Selector, FuzzySelector" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NSelectItem.Target>
+                  </uix:NSelectItem>
+                </Sequence>
+              </If.Else>
+            </If>
+            <If Condition="[Fncl_Config(&quot;Corporate Remittance&quot;).ToString().ToUpper.Equals(&quot;YES&quot;)]" sap:VirtualizedContainerService.HintSize="546,584.6666666666666" sap2010:WorkflowViewState.IdRef="If_10">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <If.Then>
+                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,308" sap2010:WorkflowViewState.IdRef="Sequence_25">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'InputBox'" sap:VirtualizedContainerService.HintSize="354,220" sap2010:WorkflowViewState.IdRef="NClick_7" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="85332b24-ecfd-4007-a523-26f8fa30724f" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://pcs-uat.professionalcredit.com/clientmaster#section4" DesignTimeRectangle="233, 619, 16, 18" DesignTimeScaleFactor="1" ElementType="CheckBox" FullSelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl id='chkCorpRemit' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl id='chkCorpRemit' tag='INPUT' type='checkbox' class='custom-control-input clientMasterId' aaname=' Corporate Remittance ' /&gt;" Guid="dae4533e-4ca5-4b40-bc2b-cdd6da060b4c" InformativeScreenshot="5af3c03190b785c50375c198e0aa441c.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ARTrail [PCS]' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V3" Visibility="Interactive" WaitForReadyArgument="Complete">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target CVScreenId="5fa8f1b7-e9cb-4ff7-9d07-127f8cf9813a" CvElementArea="219, 613, 393, 37" CvType="InputBox" DesignTimeRectangle="257, 619, 136, 24" ElementType="Text" FullSelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl aaname=' Corporate Remittance ' class='custom-control-label' parentid='section4' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl aaname=' Corporate Remittance ' class='custom-control-label' parentid='section4' tag='LABEL' type='' check:innerText='Corporate Remittance' /&gt;" Guid="51a2aec6-dfae-4e93-8bbc-8cd3c1d40d78" SearchSteps="Selector, FuzzySelector, CV" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NClick.Target>
+                    <uix:NClick.VerifyOptions>
+                      <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                        <uix:VerifyExecutionOptions.Retry>
+                          <InArgument x:TypeArguments="x:Boolean" />
+                        </uix:VerifyExecutionOptions.Retry>
+                        <uix:VerifyExecutionOptions.Timeout>
+                          <InArgument x:TypeArguments="x:Double" />
+                        </uix:VerifyExecutionOptions.Timeout>
+                      </uix:VerifyExecutionOptions>
+                    </uix:NClick.VerifyOptions>
+                  </uix:NClick>
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,104.66666666666667" sap2010:WorkflowViewState.IdRef="Sequence_26">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
+              </If.Else>
+            </If>
+            <If Condition="[Fncl_Config(&quot;Trust Group&quot;).ToString().ToUpper.Equals(&quot;NONE&quot;)]" sap:VirtualizedContainerService.HintSize="546,412.6666666666667" sap2010:WorkflowViewState.IdRef="If_17">
+              <If.Then>
+                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,104.66666666666667" sap2010:WorkflowViewState.IdRef="Sequence_39">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,136" sap2010:WorkflowViewState.IdRef="Sequence_40">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NSelectItem DisplayName="Select Item 'Trust Group'" sap:VirtualizedContainerService.HintSize="354,48" sap2010:WorkflowViewState.IdRef="NSelectItem_18" Item="[Fncl_Config(&quot;Trust Group&quot;).ToString]" ScopeIdentifier="85332b24-ecfd-4007-a523-26f8fa30724f" Version="V3">
                     <uix:NSelectItem.Items>
                       <scg:List x:TypeArguments="x:String" Capacity="5">
                         <x:String>Select</x:String>
@@ -869,7 +877,24 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </uix:NSelectItem>
-                  <uix:NSelectItem DisplayName="Select Item 'Overpayment Remit To'" sap:VirtualizedContainerService.HintSize="354,57.333333333333336" sap2010:WorkflowViewState.IdRef="NSelectItem_18" Item="[Fncl_Config(&quot;Over payment remit to&quot;).ToString]" ScopeIdentifier="85332b24-ecfd-4007-a523-26f8fa30724f" Version="V3">
+                </Sequence>
+              </If.Else>
+            </If>
+            <If Condition="[Fncl_Config.ContainsKey(&quot;Over payment remit to&quot;)]" sap:VirtualizedContainerService.HintSize="546,1067.3333333333333" sap2010:WorkflowViewState.IdRef="If_15">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <If.Then>
+                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,270" sap2010:WorkflowViewState.IdRef="Sequence_35">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NSelectItem DisplayName="Select Item 'Overpayment Remit To'" sap:VirtualizedContainerService.HintSize="354,182" sap2010:WorkflowViewState.IdRef="NSelectItem_19" Item="[Fncl_Config(&quot;Over payment remit to&quot;).ToString]" ScopeIdentifier="85332b24-ecfd-4007-a523-26f8fa30724f" Version="V3">
                     <uix:NSelectItem.Items>
                       <scg:List x:TypeArguments="x:String" Capacity="3">
                         <x:String>Select</x:String>
@@ -888,239 +913,56 @@
                     </uix:NSelectItem.Target>
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </uix:NSelectItem>
-                  <uix:NSelectItem DisplayName="Select Item 'Overpayment by Client'" sap:VirtualizedContainerService.HintSize="354,57.333333333333336" sap2010:WorkflowViewState.IdRef="NSelectItem_23" Item="[Fncl_Config(&quot;Over Payment by Client&quot;).ToString()]" ScopeIdentifier="85332b24-ecfd-4007-a523-26f8fa30724f" Version="V3">
-                    <uix:NSelectItem.Items>
-                      <scg:List x:TypeArguments="x:String" Capacity="3">
-                        <x:String>Select</x:String>
-                        <x:String>Remit to Client</x:String>
-                        <x:String>Retain in Client AR</x:String>
-                      </scg:List>
-                    </uix:NSelectItem.Items>
-                    <uix:NSelectItem.Target>
-                      <uix:TargetAnchorable BrowserURL="https://pcs-uat.professionalcredit.com/clientmaster#section4" CVScreenId="0b726aad-158c-45db-83ac-217f1cacbf2d" CvElementArea="849, 728, 483, 55" CvType="InputBox" DesignTimeRectangle="852, 809, 478, 51" DesignTimeScaleFactor="1.5" ElementType="DropDown" FullSelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl id='ovpPaymentLookup' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl id='ovpPaymentLookup' tag='SELECT' type='' class='form-control clientMasterId disabled' aaname='' /&gt;" Guid="e4ad3990-5b4b-484d-a01b-dc1a18344f72" ImageBase64="" InformativeScreenshot="98fe084851b3ddb8cc6602b69d23aba7.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ARTrail [PCS]' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V3" Visibility="Interactive">
-                        <uix:TargetAnchorable.Anchors>
-                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                            <uix:Target DesignTimeRectangle="861, 777, 198, 27" ElementType="Text" FullSelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl aaname=' Overpayment by Client ' parentid='section4' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl aaname=' Overpayment by Client ' parentid='section4' tag='LABEL' type='' class='' check:innerText='Overpayment by Client' /&gt;" Guid="63241f21-e358-413b-b2ad-0f9d1390e098" SearchSteps="FuzzySelector" />
-                          </scg:List>
-                        </uix:TargetAnchorable.Anchors>
-                      </uix:TargetAnchorable>
-                    </uix:NSelectItem.Target>
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                  </uix:NSelectItem>
-                  <If Condition="[Fncl_Config(&quot;Is Corporate Summary Required?&quot;).ToString().ToUpper.Equals(&quot;NO&quot;)]" sap:VirtualizedContainerService.HintSize="354,57.333333333333336" sap2010:WorkflowViewState.IdRef="If_9">
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="512,625.3333333333334" sap2010:WorkflowViewState.IdRef="Sequence_36">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <If Condition="[Fncl_Config.ContainsKey(&quot;Overpayment by Client&quot;)]" sap:VirtualizedContainerService.HintSize="450,537.3333333333334" sap2010:WorkflowViewState.IdRef="If_16">
                     <If.Then>
-                      <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,308" sap2010:WorkflowViewState.IdRef="Sequence_22">
+                      <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,270" sap2010:WorkflowViewState.IdRef="Sequence_37">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'InputBox'" sap:VirtualizedContainerService.HintSize="354,220" sap2010:WorkflowViewState.IdRef="NClick_9" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="85332b24-ecfd-4007-a523-26f8fa30724f" Version="V3">
-                          <uix:NClick.Target>
-                            <uix:TargetAnchorable BrowserURL="https://pcs-uat.professionalcredit.com/clientmaster#section4" DesignTimeRectangle="1356, 682, 16, 17" DesignTimeScaleFactor="1" ElementType="CheckBox" FullSelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl id='chkisCorporatesummary' tag='INPUT' aaname=' Is Corporate Summary Required?' parentid='section4' type='checkbox' /&gt;" FuzzySelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl id='chkisCorporatesummary' tag='INPUT' type='checkbox' class='custom-control-input clientMasterId' aaname=' Is Corporate Summary Required?' /&gt;" Guid="5960ff3a-3277-44c8-9cfa-02e650de3fd1" InformativeScreenshot="f4e887b435a095ead7f8fdedbc988ac2.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ARTrail [PCS]' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V3" Visibility="Interactive" WaitForReadyArgument="Complete">
+                        <uix:NSelectItem DisplayName="Select Item 'Overpayment Remit To'" sap:VirtualizedContainerService.HintSize="354,182" sap2010:WorkflowViewState.IdRef="NSelectItem_21" Item="[Fncl_Config(&quot;Overpayment by Client&quot;).ToString]" ScopeIdentifier="85332b24-ecfd-4007-a523-26f8fa30724f" Version="V3">
+                          <uix:NSelectItem.Items>
+                            <scg:List x:TypeArguments="x:String" Capacity="3">
+                              <x:String>Select</x:String>
+                              <x:String>Remit to Client</x:String>
+                              <x:String>Remit to Consumer</x:String>
+                            </scg:List>
+                          </uix:NSelectItem.Items>
+                          <uix:NSelectItem.Target>
+                            <uix:TargetAnchorable BrowserURL="https://pcs-uat.professionalcredit.com/clientmaster#section4" CVScreenId="5d90d649-8aa6-41c2-a3c3-11290671547e" CvElementArea="218, 675, 537, 37" CvType="InputBox" DesignTimeRectangle="220, 677, 532, 34" DesignTimeScaleFactor="1" ElementType="DropDown" FullSelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl id='cmboverpayremit' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl id='cmboverpayremit' tag='SELECT' type='' class='form-control clientMasterId disabled' aaname='' /&gt;" Guid="eef0029f-5095-46b0-a226-4667d8782c00" ImageBase64="" InformativeScreenshot="01ae1dbb679873c1a3af001995fc522a.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ARTrail [PCS]' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V3" Visibility="Interactive">
                               <uix:TargetAnchorable.Anchors>
                                 <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                  <uix:Target CVScreenId="4cd1d4a1-b032-4533-9d45-724c8d763e2c" CvElementArea="1342, 676, 534, 36" CvType="InputBox" DesignTimeRectangle="1380, 682, 208, 24" ElementType="Text" FullSelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl aaname=' Is Corporate Summary Required?' class='custom-control-label' parentid='section4' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl aaname=' Is Corporate Summary Required?' class='custom-control-label' parentid='section4' tag='LABEL' type='' check:innerText='Is Corporate Summary Required?' /&gt;" Guid="b79e8af2-76de-46da-80a2-92c05e54c510" SearchSteps="Selector, FuzzySelector, CV" />
+                                  <uix:Target CVScreenId="5d90d649-8aa6-41c2-a3c3-11290671547e" CvTextArea="230, 657, 124, 14" CvTextArgument="Overpayment Remit To" CvType="Text" DesignTimeRectangle="226, 655, 133, 18" ElementType="Text" FullSelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl aaname=' Overpayment Remit To ' parentid='section4' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl aaname=' Overpayment Remit To ' parentid='section4' tag='LABEL' type='' class='' check:innerText='Overpayment Remit To' /&gt;" Guid="51cec944-3ad3-492b-bd72-008a2e2d5d7e" SearchSteps="FuzzySelector, CV" />
                                 </scg:List>
                               </uix:TargetAnchorable.Anchors>
                             </uix:TargetAnchorable>
-                          </uix:NClick.Target>
-                          <uix:NClick.VerifyOptions>
-                            <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
-                              <uix:VerifyExecutionOptions.Retry>
-                                <InArgument x:TypeArguments="x:Boolean" />
-                              </uix:VerifyExecutionOptions.Retry>
-                              <uix:VerifyExecutionOptions.Timeout>
-                                <InArgument x:TypeArguments="x:Double" />
-                              </uix:VerifyExecutionOptions.Timeout>
-                            </uix:VerifyExecutionOptions>
-                          </uix:NClick.VerifyOptions>
+                          </uix:NSelectItem.Target>
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               <x:Boolean x:Key="IsPinned">False</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                        </uix:NClick>
+                        </uix:NSelectItem>
                       </Sequence>
                     </If.Then>
                     <If.Else>
-                      <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,104.66666666666667" sap2010:WorkflowViewState.IdRef="Sequence_23">
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                      </Sequence>
-                    </If.Else>
-                  </If>
-                  <If Condition="[Fncl_Config(&quot;Does AR Deduct from Trust&quot;).ToString().ToUpper.Equals(&quot;YES&quot;)]" sap:VirtualizedContainerService.HintSize="354,57.333333333333336" sap2010:WorkflowViewState.IdRef="If_11">
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                    <If.Then>
-                      <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,136" sap2010:WorkflowViewState.IdRef="Sequence_24">
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'InputBox'" sap:VirtualizedContainerService.HintSize="354,48" sap2010:WorkflowViewState.IdRef="NClick_10" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="85332b24-ecfd-4007-a523-26f8fa30724f" Version="V3">
-                          <uix:NClick.Target>
-                            <uix:TargetAnchorable BrowserURL="https://pcs-uat.professionalcredit.com/clientmaster#section4" DesignTimeRectangle="233, 644, 16, 18" DesignTimeScaleFactor="1" ElementType="CheckBox" FullSelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl id='chkdeductARfromtrust' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl id='chkdeductARfromtrust' tag='INPUT' type='checkbox' class='custom-control-input clientMasterId' aaname='Does AR Deduct from Trust?' /&gt;" Guid="19f704f6-a160-4065-aee6-cdf136f293bf" InformativeScreenshot="de5903b90109b4c1911892d602a95586.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ARTrail [PCS]' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V3" Visibility="Interactive">
-                              <uix:TargetAnchorable.Anchors>
-                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                  <uix:Target CVScreenId="9cb89774-c61a-49c2-a285-287c037e33c5" CvElementArea="219, 638, 816, 36" CvType="InputBox" DesignTimeRectangle="257, 644, 177, 24" ElementType="Text" FullSelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl aaname='Does AR Deduct from Trust?' class='custom-control-label' parentid='section4' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl aaname='Does AR Deduct from Trust?' class='custom-control-label' parentid='section4' tag='LABEL' type='' check:innerText='Does AR Deduct from Trust?' /&gt;" Guid="ba7463ad-d300-479e-a338-e8876f80d5b7" SearchSteps="FuzzySelector, CV" />
-                                </scg:List>
-                              </uix:TargetAnchorable.Anchors>
-                            </uix:TargetAnchorable>
-                          </uix:NClick.Target>
-                          <uix:NClick.VerifyOptions>
-                            <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
-                              <uix:VerifyExecutionOptions.Retry>
-                                <InArgument x:TypeArguments="x:Boolean" />
-                              </uix:VerifyExecutionOptions.Retry>
-                              <uix:VerifyExecutionOptions.Timeout>
-                                <InArgument x:TypeArguments="x:Double" />
-                              </uix:VerifyExecutionOptions.Timeout>
-                            </uix:VerifyExecutionOptions>
-                          </uix:NClick.VerifyOptions>
-                          <sap:WorkflowViewStateService.ViewState>
-                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                            </scg:Dictionary>
-                          </sap:WorkflowViewStateService.ViewState>
-                        </uix:NClick>
-                      </Sequence>
-                    </If.Then>
-                    <If.Else>
-                      <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,104.66666666666667" sap2010:WorkflowViewState.IdRef="Sequence_25">
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                      </Sequence>
-                    </If.Else>
-                  </If>
-                  <If Condition="[Fncl_Config(&quot;Charge Interest?&quot;).ToString().ToUpper.Equals(&quot;YES&quot;)]" sap:VirtualizedContainerService.HintSize="354,57.333333333333336" sap2010:WorkflowViewState.IdRef="If_12">
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                    <If.Then>
-                      <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,308" sap2010:WorkflowViewState.IdRef="Sequence_26">
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'InputBox'" sap:VirtualizedContainerService.HintSize="354,220" sap2010:WorkflowViewState.IdRef="NClick_11" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="85332b24-ecfd-4007-a523-26f8fa30724f" Version="V3">
-                          <uix:NClick.Target>
-                            <uix:TargetAnchorable BrowserURL="https://pcs-uat.professionalcredit.com/clientmaster#section4" DesignTimeRectangle="233, 656, 16, 17" DesignTimeScaleFactor="1" ElementType="CheckBox" FullSelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl id='chkChargeInterest' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl id='chkChargeInterest' tag='INPUT' type='checkbox' class='custom-control-input clientMasterId' aaname=' Charge Interest? ' /&gt;" Guid="8e934e3d-1ef4-4a0a-b104-1365d95146c1" InformativeScreenshot="7518f105240a40590c6e1b0f253f12c5.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ARTrail [PCS]' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V3" Visibility="Interactive" WaitForReadyArgument="Complete">
-                              <uix:TargetAnchorable.Anchors>
-                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                  <uix:Target CVScreenId="b9f6d1d6-bfe3-4043-aad6-e4ad7a62fa9e" CvElementArea="219, 649, 358, 36" CvType="InputBox" DesignTimeRectangle="257, 656, 103, 24" ElementType="Text" FullSelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl aaname=' Charge Interest? ' class='custom-control-label' parentid='section4' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl aaname=' Charge Interest? ' class='custom-control-label' parentid='section4' tag='LABEL' type='' check:innerText='Charge Interest?' /&gt;" Guid="b8ae56e7-866a-48ab-9da1-3cdbd40db98f" SearchSteps="Selector, FuzzySelector, CV" />
-                                </scg:List>
-                              </uix:TargetAnchorable.Anchors>
-                            </uix:TargetAnchorable>
-                          </uix:NClick.Target>
-                          <uix:NClick.VerifyOptions>
-                            <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
-                              <uix:VerifyExecutionOptions.Retry>
-                                <InArgument x:TypeArguments="x:Boolean" />
-                              </uix:VerifyExecutionOptions.Retry>
-                              <uix:VerifyExecutionOptions.Timeout>
-                                <InArgument x:TypeArguments="x:Double" />
-                              </uix:VerifyExecutionOptions.Timeout>
-                            </uix:VerifyExecutionOptions>
-                          </uix:NClick.VerifyOptions>
-                          <sap:WorkflowViewStateService.ViewState>
-                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                            </scg:Dictionary>
-                          </sap:WorkflowViewStateService.ViewState>
-                        </uix:NClick>
-                      </Sequence>
-                    </If.Then>
-                    <If.Else>
-                      <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,104.66666666666667" sap2010:WorkflowViewState.IdRef="Sequence_27">
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                      </Sequence>
-                    </If.Else>
-                  </If>
-                  <If Condition="[Fncl_Config(&quot;Split Interest?&quot;).ToString().ToUpper.Equals(&quot;YES&quot;)]" sap:VirtualizedContainerService.HintSize="354,48" sap2010:WorkflowViewState.IdRef="If_15">
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                    <If.Then>
-                      <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,136" sap2010:WorkflowViewState.IdRef="Sequence_32">
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'unchecked'" sap:VirtualizedContainerService.HintSize="354,48" sap2010:WorkflowViewState.IdRef="NClick_13" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="85332b24-ecfd-4007-a523-26f8fa30724f" Version="V3">
-                          <uix:NClick.Target>
-                            <uix:TargetAnchorable BrowserURL="https://pcs-uat.professionalcredit.com/clientmaster#section4" DesignTimeRectangle="707, 777, 24, 27" DesignTimeScaleFactor="1.5" ElementType="CheckBox" FullSelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl id='chksplitInterest' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl id='chksplitInterest' tag='INPUT' type='checkbox' class='custom-control-input clientMasterId' aaname=' Split Interest? ' /&gt;" Guid="84a80fea-ec4e-483b-8bfc-7d2d26df3d8c" InformativeScreenshot="5c5f4977d5dd743c4aac9c5e3c4d93b2.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ARTrail [PCS]' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V3" Visibility="Interactive">
-                              <uix:TargetAnchorable.Anchors>
-                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                  <uix:Target DesignTimeRectangle="743, 777, 130, 36" ElementType="Text" FullSelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl aaname=' Split Interest? ' class='custom-control-label' parentid='section4' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl aaname=' Split Interest? ' class='custom-control-label' parentid='section4' tag='LABEL' type='' check:innerText='Split Interest?' /&gt;" Guid="146e5310-0bcb-4468-b4e5-b6aa34ae8b67" SearchSteps="FuzzySelector" />
-                                </scg:List>
-                              </uix:TargetAnchorable.Anchors>
-                            </uix:TargetAnchorable>
-                          </uix:NClick.Target>
-                          <uix:NClick.VerifyOptions>
-                            <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
-                              <uix:VerifyExecutionOptions.Retry>
-                                <InArgument x:TypeArguments="x:Boolean" />
-                              </uix:VerifyExecutionOptions.Retry>
-                              <uix:VerifyExecutionOptions.Timeout>
-                                <InArgument x:TypeArguments="x:Double" />
-                              </uix:VerifyExecutionOptions.Timeout>
-                            </uix:VerifyExecutionOptions>
-                          </uix:NClick.VerifyOptions>
-                          <sap:WorkflowViewStateService.ViewState>
-                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                            </scg:Dictionary>
-                          </sap:WorkflowViewStateService.ViewState>
-                        </uix:NClick>
-                      </Sequence>
-                    </If.Then>
-                    <If.Else>
-                      <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,104.66666666666667" sap2010:WorkflowViewState.IdRef="Sequence_33">
+                      <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,104.66666666666667" sap2010:WorkflowViewState.IdRef="Sequence_38">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1130,31 +972,252 @@
                     </If.Else>
                   </If>
                 </Sequence>
-              </ui:CommentOut.Body>
+              </If.Else>
+            </If>
+            <If Condition="[Fncl_Config(&quot;Is Corporate Summary Required?&quot;).ToString().ToUpper.Equals(&quot;NO&quot;)]" sap:VirtualizedContainerService.HintSize="546,584.6666666666666" sap2010:WorkflowViewState.IdRef="If_11">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-            </ui:CommentOut>
-            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="354,57.333333333333336" sap2010:WorkflowViewState.IdRef="CommentOut_3">
-              <ui:CommentOut.Body>
-                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,136" sap2010:WorkflowViewState.IdRef="Sequence_17">
+              <If.Then>
+                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,308" sap2010:WorkflowViewState.IdRef="Sequence_27">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'InputBox'" sap:VirtualizedContainerService.HintSize="354,48" sap2010:WorkflowViewState.IdRef="NClick_6" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="85332b24-ecfd-4007-a523-26f8fa30724f" Version="V3">
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'InputBox'" sap:VirtualizedContainerService.HintSize="354,220" sap2010:WorkflowViewState.IdRef="NClick_8" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="85332b24-ecfd-4007-a523-26f8fa30724f" Version="V3">
                     <uix:NClick.Target>
-                      <uix:TargetAnchorable BrowserURL="https://pcs-uat.professionalcredit.com/clientmaster#section4" DesignTimeRectangle="1356, 493, 16, 18" DesignTimeScaleFactor="1" ElementType="CheckBox" FullSelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl id='chkACHRemit' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl id='chkACHRemit' tag='INPUT' type='checkbox' class='custom-control-input clientMasterId' aaname=' ACH Remit? ' /&gt;" Guid="146b01b8-81ff-4a9f-a01d-0b34e1940ff2" InformativeScreenshot="25f528f304e64086c9abbdcc6e0b7179.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ARTrail [PCS]' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V3" Visibility="Interactive" WaitForReadyArgument="Complete">
+                      <uix:TargetAnchorable BrowserURL="https://pcs-uat.professionalcredit.com/clientmaster#section4" DesignTimeRectangle="1356, 682, 16, 17" DesignTimeScaleFactor="1" ElementType="CheckBox" FullSelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl id='chkisCorporatesummary' tag='INPUT' aaname=' Is Corporate Summary Required?' parentid='section4' type='checkbox' /&gt;" FuzzySelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl id='chkisCorporatesummary' tag='INPUT' type='checkbox' class='custom-control-input clientMasterId' aaname=' Is Corporate Summary Required?' /&gt;" Guid="5960ff3a-3277-44c8-9cfa-02e650de3fd1" InformativeScreenshot="f4e887b435a095ead7f8fdedbc988ac2.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ARTrail [PCS]' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V3" Visibility="Interactive" WaitForReadyArgument="Complete">
                         <uix:TargetAnchorable.Anchors>
                           <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                            <uix:Target CVScreenId="76539ecf-ed3b-4af7-b21f-eaa1d8ded265" CvElementArea="1342, 486, 535, 36" CvType="InputBox" DesignTimeRectangle="1380, 493, 76, 24" ElementType="Text" FullSelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl aaname=' ACH Remit? ' class='custom-control-label' parentid='section4' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl aaname=' ACH Remit? ' class='custom-control-label' parentid='section4' tag='LABEL' type='' check:innerText='ACH Remit?' /&gt;" Guid="269f2ef6-493d-498f-94dd-ce26a3e154d7" SearchSteps="Selector, FuzzySelector, CV" />
+                            <uix:Target CVScreenId="4cd1d4a1-b032-4533-9d45-724c8d763e2c" CvElementArea="1342, 676, 534, 36" CvType="InputBox" DesignTimeRectangle="1380, 682, 208, 24" ElementType="Text" FullSelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl aaname=' Is Corporate Summary Required?' class='custom-control-label' parentid='section4' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl aaname=' Is Corporate Summary Required?' class='custom-control-label' parentid='section4' tag='LABEL' type='' check:innerText='Is Corporate Summary Required?' /&gt;" Guid="b79e8af2-76de-46da-80a2-92c05e54c510" SearchSteps="Selector, FuzzySelector, CV" />
                           </scg:List>
                         </uix:TargetAnchorable.Anchors>
                       </uix:TargetAnchorable>
+                    </uix:NClick.Target>
+                    <uix:NClick.VerifyOptions>
+                      <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                        <uix:VerifyExecutionOptions.Retry>
+                          <InArgument x:TypeArguments="x:Boolean" />
+                        </uix:VerifyExecutionOptions.Retry>
+                        <uix:VerifyExecutionOptions.Timeout>
+                          <InArgument x:TypeArguments="x:Double" />
+                        </uix:VerifyExecutionOptions.Timeout>
+                      </uix:VerifyExecutionOptions>
+                    </uix:NClick.VerifyOptions>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NClick>
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,104.66666666666667" sap2010:WorkflowViewState.IdRef="Sequence_28">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
+              </If.Else>
+            </If>
+            <If Condition="[Fncl_Config(&quot;Does AR Deduct from Trust&quot;).ToString().ToUpper.Equals(&quot;YES&quot;)]" sap:VirtualizedContainerService.HintSize="546,584.6666666666666" sap2010:WorkflowViewState.IdRef="If_12">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <If.Then>
+                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,308" sap2010:WorkflowViewState.IdRef="Sequence_29">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'InputBox'" sap:VirtualizedContainerService.HintSize="354,220" sap2010:WorkflowViewState.IdRef="NClick_9" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="85332b24-ecfd-4007-a523-26f8fa30724f" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://pcs-uat.professionalcredit.com/clientmaster#section4" DesignTimeRectangle="233, 644, 16, 18" DesignTimeScaleFactor="1" ElementType="CheckBox" FullSelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl id='chkdeductARfromtrust' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl id='chkdeductARfromtrust' tag='INPUT' type='checkbox' class='custom-control-input clientMasterId' aaname='Does AR Deduct from Trust?' /&gt;" Guid="19f704f6-a160-4065-aee6-cdf136f293bf" InformativeScreenshot="de5903b90109b4c1911892d602a95586.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ARTrail [PCS]' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V3" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target CVScreenId="9cb89774-c61a-49c2-a285-287c037e33c5" CvElementArea="219, 638, 816, 36" CvType="InputBox" DesignTimeRectangle="257, 644, 177, 24" ElementType="Text" FullSelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl aaname='Does AR Deduct from Trust?' class='custom-control-label' parentid='section4' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl aaname='Does AR Deduct from Trust?' class='custom-control-label' parentid='section4' tag='LABEL' type='' check:innerText='Does AR Deduct from Trust?' /&gt;" Guid="ba7463ad-d300-479e-a338-e8876f80d5b7" SearchSteps="FuzzySelector, CV" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NClick.Target>
+                    <uix:NClick.VerifyOptions>
+                      <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                        <uix:VerifyExecutionOptions.Retry>
+                          <InArgument x:TypeArguments="x:Boolean" />
+                        </uix:VerifyExecutionOptions.Retry>
+                        <uix:VerifyExecutionOptions.Timeout>
+                          <InArgument x:TypeArguments="x:Double" />
+                        </uix:VerifyExecutionOptions.Timeout>
+                      </uix:VerifyExecutionOptions>
+                    </uix:NClick.VerifyOptions>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NClick>
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,104.66666666666667" sap2010:WorkflowViewState.IdRef="Sequence_30">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
+              </If.Else>
+            </If>
+            <If Condition="[Fncl_Config(&quot;Charge Interest?&quot;).ToString().ToUpper.Equals(&quot;YES&quot;)]" sap:VirtualizedContainerService.HintSize="546,584.6666666666666" sap2010:WorkflowViewState.IdRef="If_13">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <If.Then>
+                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,308" sap2010:WorkflowViewState.IdRef="Sequence_31">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'InputBox'" sap:VirtualizedContainerService.HintSize="354,220" sap2010:WorkflowViewState.IdRef="NClick_10" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="85332b24-ecfd-4007-a523-26f8fa30724f" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://pcs-uat.professionalcredit.com/clientmaster#section4" DesignTimeRectangle="233, 656, 16, 17" DesignTimeScaleFactor="1" ElementType="CheckBox" FullSelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl id='chkChargeInterest' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl id='chkChargeInterest' tag='INPUT' type='checkbox' class='custom-control-input clientMasterId' aaname=' Charge Interest? ' /&gt;" Guid="8e934e3d-1ef4-4a0a-b104-1365d95146c1" InformativeScreenshot="7518f105240a40590c6e1b0f253f12c5.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ARTrail [PCS]' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V3" Visibility="Interactive" WaitForReadyArgument="Complete">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target CVScreenId="b9f6d1d6-bfe3-4043-aad6-e4ad7a62fa9e" CvElementArea="219, 649, 358, 36" CvType="InputBox" DesignTimeRectangle="257, 656, 103, 24" ElementType="Text" FullSelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl aaname=' Charge Interest? ' class='custom-control-label' parentid='section4' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl aaname=' Charge Interest? ' class='custom-control-label' parentid='section4' tag='LABEL' type='' check:innerText='Charge Interest?' /&gt;" Guid="b8ae56e7-866a-48ab-9da1-3cdbd40db98f" SearchSteps="Selector, FuzzySelector, CV" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NClick.Target>
+                    <uix:NClick.VerifyOptions>
+                      <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                        <uix:VerifyExecutionOptions.Retry>
+                          <InArgument x:TypeArguments="x:Boolean" />
+                        </uix:VerifyExecutionOptions.Retry>
+                        <uix:VerifyExecutionOptions.Timeout>
+                          <InArgument x:TypeArguments="x:Double" />
+                        </uix:VerifyExecutionOptions.Timeout>
+                      </uix:VerifyExecutionOptions>
+                    </uix:NClick.VerifyOptions>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NClick>
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,104.66666666666667" sap2010:WorkflowViewState.IdRef="Sequence_32">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
+              </If.Else>
+            </If>
+            <If Condition="[Fncl_Config(&quot;Split Interest?&quot;).ToString().ToUpper.Equals(&quot;YES&quot;)]" sap:VirtualizedContainerService.HintSize="546,412.6666666666667" sap2010:WorkflowViewState.IdRef="If_14">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <If.Then>
+                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,136" sap2010:WorkflowViewState.IdRef="Sequence_33">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'unchecked'" sap:VirtualizedContainerService.HintSize="354,48" sap2010:WorkflowViewState.IdRef="NClick_11" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="85332b24-ecfd-4007-a523-26f8fa30724f" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://pcs-uat.professionalcredit.com/clientmaster#section4" DesignTimeRectangle="707, 777, 24, 27" DesignTimeScaleFactor="1.5" ElementType="CheckBox" FullSelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl id='chksplitInterest' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl id='chksplitInterest' tag='INPUT' type='checkbox' class='custom-control-input clientMasterId' aaname=' Split Interest? ' /&gt;" Guid="84a80fea-ec4e-483b-8bfc-7d2d26df3d8c" InformativeScreenshot="5c5f4977d5dd743c4aac9c5e3c4d93b2.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ARTrail [PCS]' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V3" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target DesignTimeRectangle="743, 777, 130, 36" ElementType="Text" FullSelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl aaname=' Split Interest? ' class='custom-control-label' parentid='section4' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl aaname=' Split Interest? ' class='custom-control-label' parentid='section4' tag='LABEL' type='' check:innerText='Split Interest?' /&gt;" Guid="146e5310-0bcb-4468-b4e5-b6aa34ae8b67" SearchSteps="FuzzySelector" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NClick.Target>
+                    <uix:NClick.VerifyOptions>
+                      <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                        <uix:VerifyExecutionOptions.Retry>
+                          <InArgument x:TypeArguments="x:Boolean" />
+                        </uix:VerifyExecutionOptions.Retry>
+                        <uix:VerifyExecutionOptions.Timeout>
+                          <InArgument x:TypeArguments="x:Double" />
+                        </uix:VerifyExecutionOptions.Timeout>
+                      </uix:VerifyExecutionOptions>
+                    </uix:NClick.VerifyOptions>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NClick>
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,104.66666666666667" sap2010:WorkflowViewState.IdRef="Sequence_34">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
+              </If.Else>
+            </If>
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="546,57.333333333333336" sap2010:WorkflowViewState.IdRef="CommentOut_5">
+              <ui:CommentOut.Body>
+                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,193.33333333333334" sap2010:WorkflowViewState.IdRef="Sequence_41">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NHover DisplayName="Hover 'SPAN'" sap:VirtualizedContainerService.HintSize="354,57.333333333333336" HoverTime="1" sap2010:WorkflowViewState.IdRef="NHover_1" ScopeIdentifier="85332b24-ecfd-4007-a523-26f8fa30724f" Version="V3">
+                    <uix:NHover.Target>
+                      <uix:TargetAnchorable BrowserURL="https://pcs-uat.professionalcredit.com/clientmaster" CVScreenId="9ada1279-0425-4e99-bb6b-39aa40bf6e35" CvTextArea="1871, 252, 11, 20" CvTextArgument=":" CvType="Text" DesignTimeRectangle="1858, 254, 38, 20" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl parentid='smartwizardContent' tag='SPAN' class='fa fa-ellipsis-v' /&gt;" FuzzySelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl type='' parentid='smartwizardContent' tag='SPAN' class='fa fa-ellipsis-v' aaname='' /&gt;" Guid="e394b2b0-1970-4209-b7da-f512e766a872" InformativeScreenshot="5ceae34b53fbff18d6555f06670204e8.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ARTrail [PCS]' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive" />
+                    </uix:NHover.Target>
+                    <uix:NHover.VerifyOptions>
+                      <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                        <uix:VerifyExecutionOptions.Retry>
+                          <InArgument x:TypeArguments="x:Boolean" />
+                        </uix:VerifyExecutionOptions.Retry>
+                        <uix:VerifyExecutionOptions.Timeout>
+                          <InArgument x:TypeArguments="x:Double" />
+                        </uix:VerifyExecutionOptions.Timeout>
+                      </uix:VerifyExecutionOptions>
+                    </uix:NHover.VerifyOptions>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NHover>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Add New Client'" sap:VirtualizedContainerService.HintSize="354,48" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="85332b24-ecfd-4007-a523-26f8fa30724f" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://pcs-uat.professionalcredit.com/clientmaster#section3" CVScreenId="c5c4bfc5-3419-40c6-989f-f62e30dc7b4a" CvTextArea="1690, 381, 31, 13" CvTextArgument="Save" CvType="Text" DesignTimeRectangle="8, 235, 0, 0" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl aaname='*Save*' parentid='smartwizardContent' tag='A' uipath-html-title='Save complete record' visibleinnertext='*Save*' /&gt;" FuzzySelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl aaname='*Save*' parentid='smartwizardContent' tag='A' uipath-html-title='Save complete record' visibleinnertext='*Save*' type='' class='finish dropdown-item deSelectAlways' check:text='Save' /&gt;" Guid="0dc30419-542e-4d0b-aac9-4e93cbf1ef7d" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ARTrail [PCS]' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V3" Visibility="Interactive" />
                     </uix:NClick.Target>
                     <uix:NClick.VerifyOptions>
                       <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
@@ -1182,57 +1245,8 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:CommentOut>
-            <uix:NHover DisplayName="Hover 'SPAN'" sap:VirtualizedContainerService.HintSize="354,57.333333333333336" HoverTime="1" sap2010:WorkflowViewState.IdRef="NHover_1" ScopeIdentifier="85332b24-ecfd-4007-a523-26f8fa30724f" Version="V3">
-              <uix:NHover.Target>
-                <uix:TargetAnchorable BrowserURL="https://pcs-uat.professionalcredit.com/clientmaster" CVScreenId="9ada1279-0425-4e99-bb6b-39aa40bf6e35" CvTextArea="1871, 252, 11, 20" CvTextArgument=":" CvType="Text" DesignTimeRectangle="1858, 254, 38, 20" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl parentid='smartwizardContent' tag='SPAN' class='fa fa-ellipsis-v' /&gt;" FuzzySelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl type='' parentid='smartwizardContent' tag='SPAN' class='fa fa-ellipsis-v' aaname='' /&gt;" Guid="e394b2b0-1970-4209-b7da-f512e766a872" InformativeScreenshot="5ceae34b53fbff18d6555f06670204e8.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ARTrail [PCS]' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive" />
-              </uix:NHover.Target>
-              <uix:NHover.VerifyOptions>
-                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
-                  <uix:VerifyExecutionOptions.Retry>
-                    <InArgument x:TypeArguments="x:Boolean" />
-                  </uix:VerifyExecutionOptions.Retry>
-                  <uix:VerifyExecutionOptions.Timeout>
-                    <InArgument x:TypeArguments="x:Double" />
-                  </uix:VerifyExecutionOptions.Timeout>
-                </uix:VerifyExecutionOptions>
-              </uix:NHover.VerifyOptions>
-              <sap:WorkflowViewStateService.ViewState>
-                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                </scg:Dictionary>
-              </sap:WorkflowViewStateService.ViewState>
-            </uix:NHover>
-            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Save'" sap:VirtualizedContainerService.HintSize="354,57.333333333333336" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="85332b24-ecfd-4007-a523-26f8fa30724f" Version="V3">
-              <uix:NClick.Target>
-                <uix:TargetAnchorable BrowserURL="https://pcs-uat.professionalcredit.com/clientmaster#section3" CVScreenId="c5c4bfc5-3419-40c6-989f-f62e30dc7b4a" CvTextArea="1690, 381, 31, 13" CvTextArgument="Save" CvType="Text" DesignTimeRectangle="8, 235, 0, 0" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl aaname='*Save*' parentid='smartwizardContent' tag='A' uipath-html-title='Save complete record' visibleinnertext='*Save*' /&gt;" FuzzySelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl aaname='*Save*' parentid='smartwizardContent' tag='A' uipath-html-title='Save complete record' visibleinnertext='*Save*' type='' class='finish dropdown-item deSelectAlways' check:text='Save' /&gt;" Guid="0dc30419-542e-4d0b-aac9-4e93cbf1ef7d" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ARTrail [PCS]' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V3" Visibility="Interactive" />
-              </uix:NClick.Target>
-              <uix:NClick.VerifyOptions>
-                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
-                  <uix:VerifyExecutionOptions.Retry>
-                    <InArgument x:TypeArguments="x:Boolean" />
-                  </uix:VerifyExecutionOptions.Retry>
-                  <uix:VerifyExecutionOptions.Timeout>
-                    <InArgument x:TypeArguments="x:Double" />
-                  </uix:VerifyExecutionOptions.Timeout>
-                </uix:VerifyExecutionOptions>
-              </uix:NClick.VerifyOptions>
-              <sap:WorkflowViewStateService.ViewState>
-                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                </scg:Dictionary>
-              </sap:WorkflowViewStateService.ViewState>
-            </uix:NClick>
-            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="354,57.333333333333336" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="done">
-              <sap:WorkflowViewStateService.ViewState>
-                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                </scg:Dictionary>
-              </sap:WorkflowViewStateService.ViewState>
-            </WriteLine>
-            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="354,50.666666666666664" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="546,124" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="done" />
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="546,50.666666666666664" sap2010:WorkflowViewState.IdRef="CommentOut_2">
               <ui:CommentOut.Body>
                 <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="608,320.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_10">
                   <sap:WorkflowViewStateService.ViewState>

@@ -1,11 +1,11 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Settings" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Settings" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="stngs_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
   </x:Members>
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1148,1234</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1148,2172.6666666666665</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Settings_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -98,30 +98,40 @@
       <AssemblyReference>System.Linq.Expressions</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <sap:WorkflowViewStateService.ViewState>
-    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-      <x:Boolean x:Key="ShouldCollapseAll">False</x:Boolean>
-    </scg:Dictionary>
-  </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="Settings" sap:VirtualizedContainerService.HintSize="512,1169.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Settings" sap:VirtualizedContainerService.HintSize="608,2108" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: ARTrail [PCS]" sap:VirtualizedContainerService.HintSize="450,1081.3333333333333" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" ScopeGuid="b1906716-c12c-48f1-98cc-e90f0e4eb7a0" Version="V2" WindowResize="Maximize">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: ARTrail [PCS]" sap:VirtualizedContainerService.HintSize="546,2020" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="b1906716-c12c-48f1-98cc-e90f0e4eb7a0" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,839.3333333333334" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="512,1778" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NSelectItem DisplayName="Select Item 'Business Type'" sap:VirtualizedContainerService.HintSize="354,191.33333333333334" sap2010:WorkflowViewState.IdRef="NSelectItem_1" Item="[stngs_Config(&quot;Business Class&quot;).ToString.Split(&quot; &quot;)(1).Split(&quot;-&quot;)(0).ToUpper]" ScopeIdentifier="b1906716-c12c-48f1-98cc-e90f0e4eb7a0" Version="V3">
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Settings'" sap:VirtualizedContainerService.HintSize="450,229.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_2" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b1906716-c12c-48f1-98cc-e90f0e4eb7a0" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://pcs-uat.professionalcredit.com/clientmaster#section2" CVScreenId="244f2684-94c4-49f6-a5a0-6984cc7dc258" CvTextArea="93, 499, 72, 22" CvTextArgument="Settings" CvType="Text" DesignTimeRectangle="11, 450, 238, 93" DesignTimeScaleFactor="1.5" ElementType="Text" FullSelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl parentid='othersettings' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl parentid='othersettings' tag='A' type='' class='nav-link active' aaname='  Settings ' check:innerText='Settings' /&gt;" Guid="b098e0b3-8688-41cc-bfd3-84d7550b97a3" InformativeScreenshot="fb7a0ec60984f1a8c68ccda7e05fa745.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ARTrail [PCS]' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V3" Visibility="Interactive" WaitForReadyArgument="Complete" />
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+            </uix:NClick>
+            <uix:NSelectItem DisplayName="Select Item 'Business Type'" sap:VirtualizedContainerService.HintSize="450,191.33333333333334" sap2010:WorkflowViewState.IdRef="NSelectItem_1" Item="[stngs_Config(&quot;Business Class&quot;).ToString.Split(&quot; &quot;)(1).Split(&quot;-&quot;)(0).ToUpper]" ScopeIdentifier="b1906716-c12c-48f1-98cc-e90f0e4eb7a0" Version="V3">
               <uix:NSelectItem.Items>
                 <scg:List x:TypeArguments="x:String" Capacity="14">
                   <x:String>Select</x:String>
@@ -141,10 +151,10 @@
                 </scg:List>
               </uix:NSelectItem.Items>
               <uix:NSelectItem.Target>
-                <uix:TargetAnchorable BrowserURL="https://pcs-uat.professionalcredit.com/clientmaster" CVScreenId="79d828a2-961b-4005-bd73-53dfdbed3ecd" CvElementArea="325, 626, 352, 55" CvType="InputBox" DesignTimeRectangle="329, 623, 347, 51" DesignTimeScaleFactor="1.5" ElementType="DropDown" FullSelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl id='cmbBusinessMaster' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl id='cmbBusinessMaster' tag='SELECT' type='' class='form-control clientMasterId disabled' aaname='Business Type' /&gt;" Guid="6de0480d-9abd-40c4-9902-25e5545007e4" ImageBase64="" InformativeScreenshot="580d066a49b869ef50e216a9ae9b1d0c.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ARTrail [PCS]' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V3" Visibility="Interactive">
+                <uix:TargetAnchorable BrowserURL="https://pcs-uat.professionalcredit.com/clientmaster" CVScreenId="79d828a2-961b-4005-bd73-53dfdbed3ecd" CvElementArea="325, 626, 352, 55" CvType="InputBox" DesignTimeRectangle="329, 629, 347, 51" DesignTimeScaleFactor="1.5" ElementType="DropDown" FullSelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl id='cmbBusinessMaster' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl id='cmbBusinessMaster' tag='SELECT' type='' class='form-control clientMasterId disabled' aaname='Business Type' /&gt;" Guid="6de0480d-9abd-40c4-9902-25e5545007e4" InformativeScreenshot="6d956a5716771d31e1d79daf955312e4.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ARTrail [PCS]' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive" WaitForReadyArgument="Complete">
                   <uix:TargetAnchorable.Anchors>
                     <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                      <uix:Target CVScreenId="79d828a2-961b-4005-bd73-53dfdbed3ecd" CvTextArea="336, 600, 118, 21" CvTextArgument="Business Type" CvType="Text" DesignTimeRectangle="338, 590, 116, 27" ElementType="Text" FullSelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl parentid='section2' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl parentid='section2' tag='LABEL' type='' class='requiredField pushLabelTop' aaname='Business Type' check:innerText='Business Type' /&gt;" Guid="3c028f35-0211-42f3-bfc8-c25ddd99fa94" ImageBase64="" SearchSteps="Selector, FuzzySelector, CV" />
+                      <uix:Target CVScreenId="79d828a2-961b-4005-bd73-53dfdbed3ecd" CvTextArea="336, 600, 118, 21" CvTextArgument="Business Type" CvType="Text" DesignTimeRectangle="338, 596, 116, 27" ElementType="Text" FullSelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl parentid='section2' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl parentid='section2' tag='LABEL' type='' class='requiredField pushLabelTop' aaname='Business Type' check:innerText='Business Type' /&gt;" Guid="3c028f35-0211-42f3-bfc8-c25ddd99fa94" SearchSteps="FuzzySelector, CV" />
                     </scg:List>
                   </uix:TargetAnchorable.Anchors>
                 </uix:TargetAnchorable>
@@ -156,7 +166,30 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </uix:NSelectItem>
-            <uix:NSelectItem DisplayName="Select Item 'Business Sub Category'" sap:VirtualizedContainerService.HintSize="354,191.33333333333334" sap2010:WorkflowViewState.IdRef="NSelectItem_2" Item="[stngs_Config(&quot;Business Class&quot;).ToString.Split(&quot; &quot;)(1).ToUpper]" ScopeIdentifier="b1906716-c12c-48f1-98cc-e90f0e4eb7a0" Version="V3">
+            <uix:NSelectItem DisplayName="Select Item 'Business Sub Category'" sap:VirtualizedContainerService.HintSize="450,191.33333333333334" sap2010:WorkflowViewState.IdRef="NSelectItem_2" Item="[stngs_Config(&quot;Business Class&quot;).ToString.Split(&quot; &quot;)(1).ToUpper]" ScopeIdentifier="b1906716-c12c-48f1-98cc-e90f0e4eb7a0" Version="V3">
+              <uix:NSelectItem.Items>
+                <scg:List x:TypeArguments="x:String" Capacity="2">
+                  <x:String>Select</x:String>
+                  <x:String>GOV OREGON DEPT OF REVENUE-51</x:String>
+                </scg:List>
+              </uix:NSelectItem.Items>
+              <uix:NSelectItem.Target>
+                <uix:TargetAnchorable BrowserURL="https://pcs-uat.professionalcredit.com/clientmaster" CVScreenId="75fc0d6e-be7e-43a6-8c58-2189d3519966" CvElementArea="718, 626, 352, 56" CvType="InputBox" DesignTimeRectangle="721, 629, 347, 51" DesignTimeScaleFactor="1.5" ElementType="DropDown" FullSelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl id='cmbBusinessClass' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl id='cmbBusinessClass' tag='SELECT' type='' class='form-control clientMasterId disabled' aaname='' /&gt;" Guid="c8139655-d92e-465b-a868-18d703fd3eae" InformativeScreenshot="03a6715d186ddb481b83d20141ef68a8.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ARTrail [PCS]' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive" WaitForReadyArgument="Complete">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CVScreenId="75fc0d6e-be7e-43a6-8c58-2189d3519966" CvTextArea="729, 600, 189, 21" CvTextArgument="Business Sub Category" CvType="Text" DesignTimeRectangle="730, 596, 188, 27" ElementType="Text" FullSelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl aaname='Business Sub Category' parentid='section2' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl aaname='Business Sub Category' parentid='section2' tag='LABEL' type='' class='requiredField pushLabelTop' check:innerText='Business Sub Category' /&gt;" Guid="87e85e79-138d-4bb8-bae9-10496a3a407a" SearchSteps="FuzzySelector, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NSelectItem.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NSelectItem>
+            <uix:NSelectItem DisplayName="Select Item 'Classification'" sap:VirtualizedContainerService.HintSize="450,191.33333333333334" sap2010:WorkflowViewState.IdRef="NSelectItem_7" Item="[stngs_Config(&quot;Business Class&quot;).ToString.Split(&quot; &quot;)(1).ToUpper]" ScopeIdentifier="b1906716-c12c-48f1-98cc-e90f0e4eb7a0" Version="V3">
               <uix:NSelectItem.Items>
                 <scg:List x:TypeArguments="x:String" Capacity="50">
                   <x:String>Select</x:String>
@@ -212,10 +245,10 @@
                 </scg:List>
               </uix:NSelectItem.Items>
               <uix:NSelectItem.Target>
-                <uix:TargetAnchorable BrowserURL="https://pcs-uat.professionalcredit.com/clientmaster" CVScreenId="75fc0d6e-be7e-43a6-8c58-2189d3519966" CvElementArea="718, 626, 352, 56" CvType="InputBox" DesignTimeRectangle="721, 629, 347, 51" DesignTimeScaleFactor="1.5" ElementType="DropDown" FullSelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl id='cmbBusinessClass' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl id='cmbBusinessClass' tag='SELECT' type='' class='form-control clientMasterId disabled' aaname='' /&gt;" Guid="c8139655-d92e-465b-a868-18d703fd3eae" InformativeScreenshot="03a6715d186ddb481b83d20141ef68a8.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ARTrail [PCS]' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive">
+                <uix:TargetAnchorable BrowserURL="https://pcs-uat.professionalcredit.com/clientmaster" CVScreenId="33bd8a90-23cd-49b2-8ce3-cb8cd30db950" CvElementArea="1110, 626, 353, 56" CvType="InputBox" DesignTimeRectangle="1113, 629, 347, 51" DesignTimeScaleFactor="1.5" ElementType="DropDown" FullSelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl id='cmbclassification' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl id='cmbclassification' tag='SELECT' type='' class='form-control clientMasterId disabled' aaname='' /&gt;" Guid="1d43a540-bb80-4836-b7be-70d96180488d" InformativeScreenshot="f0ef47566fb4653f8cc73529ef1c9eef.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ARTrail [PCS]' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive" WaitForReadyArgument="Complete">
                   <uix:TargetAnchorable.Anchors>
                     <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                      <uix:Target CVScreenId="75fc0d6e-be7e-43a6-8c58-2189d3519966" CvTextArea="729, 600, 189, 21" CvTextArgument="Business Sub Category" CvType="Text" DesignTimeRectangle="730, 596, 188, 27" ElementType="Text" FullSelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl aaname='Business Sub Category' parentid='section2' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl aaname='Business Sub Category' parentid='section2' tag='LABEL' type='' class='requiredField pushLabelTop' check:innerText='Business Sub Category' /&gt;" Guid="87e85e79-138d-4bb8-bae9-10496a3a407a" SearchSteps="FuzzySelector, CV" />
+                      <uix:Target CVScreenId="33bd8a90-23cd-49b2-8ce3-cb8cd30db950" CvTextArea="1128, 598, 106, 18" CvTextArgument="Classification" CvType="Text" DesignTimeRectangle="1122, 596, 121, 27" ElementType="Text" FullSelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl aaname='Classification' parentid='section2' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl aaname='Classification' parentid='section2' tag='LABEL' type='' class='' check:innerText='Classification' /&gt;" Guid="0a03367b-b849-42ec-90f4-2d9a9f16d255" SearchSteps="FuzzySelector, CV" />
                     </scg:List>
                   </uix:TargetAnchorable.Anchors>
                 </uix:TargetAnchorable>
@@ -227,199 +260,111 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </uix:NSelectItem>
-            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="354,57.333333333333336" sap2010:WorkflowViewState.IdRef="CommentOut_1">
-              <ui:CommentOut.Body>
-                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,308" sap2010:WorkflowViewState.IdRef="Sequence_5">
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                  <uix:NSelectItem DisplayName="Select Item 'Classification'" sap:VirtualizedContainerService.HintSize="354,57.333333333333336" sap2010:WorkflowViewState.IdRef="NSelectItem_7" Item="[stngs_Config(&quot;Business Class&quot;).ToString]" ScopeIdentifier="b1906716-c12c-48f1-98cc-e90f0e4eb7a0" Version="V3">
-                    <uix:NSelectItem.Items>
-                      <scg:List x:TypeArguments="x:String" Capacity="50">
-                        <x:String>Select</x:String>
-                        <x:String>BAF BANKS &amp; FINANCE COMPANIES-COMMERCIAL-31</x:String>
-                        <x:String>BAF CREDIT CARDS &amp; RETAIL</x:String>
-                        <x:String>BAF-LISTINGS&gt;5YRS</x:String>
-                        <x:String>GOV - CONSUMER OTHER-50</x:String>
-                        <x:String>GOV OREGON (DAS) - COMMERCIAL-31</x:String>
-                        <x:String>GOV OREGON (ORCPP) - COURTS-26</x:String>
-                        <x:String>GOV OREGON (ORCPP) - OTHERE-50</x:String>
-                        <x:String>GOV OREGON - HEALTH CARE</x:String>
-                        <x:String>GOV OREGON - HIGHER EDUCATION-50</x:String>
-                        <x:String>GOV OREGON AGENCY (DAS)-50</x:String>
-                        <x:String>GOV OREGON DEPT OF REVENUE-51</x:String>
-                        <x:String>GOV OREGON- (ORCPP)- UTILITIES-9</x:String>
-                        <x:String>GOV-PURSUABLE COURT-54</x:String>
-                        <x:String>GOVERNMENT-LISTINGS&gt;5YRS</x:String>
-                        <x:String>HCH EISENHOWER</x:String>
-                        <x:String>HCH HEALTH CARE, HOSPITALS OTHER-24</x:String>
-                        <x:String>HCH PEACEHEALTH HOSPITA-20</x:String>
-                        <x:String>HCH PROVIDENCE HEALTH &amp; SERVICES-6</x:String>
-                        <x:String>HCH SAMARITAN HEALTH SERVICE-3</x:String>
-                        <x:String>HCN CLINICS/PHYSICIANS OTHER-24</x:String>
-                        <x:String>HCN HEALTHCARE UNABLE TO PURSUE</x:String>
-                        <x:String>HCN MEDICAL OTHER-24</x:String>
-                        <x:String>HEALTHCARE-LISTINGS&gt;5YRS</x:String>
-                        <x:String>INTERNAL PCS CLIENTS</x:String>
-                        <x:String>MISC CHECKS-2</x:String>
-                        <x:String>MISC CLIENTS-LISTINGS&gt;5YRS</x:String>
-                        <x:String>MISC FORWARDED BUSINESS-2</x:String>
-                        <x:String>MISC MISCELLANEOUS-2</x:String>
-                        <x:String>MISC PRE COLLECT CLIENTS-30</x:String>
-                        <x:String>MISC PROPERTY MANAGEMENT-2</x:String>
-                        <x:String>MISC SCHOOL &amp; STUDENT LOANS-2</x:String>
-                        <x:String>MISC SECONDARY PLACEMENTS-30</x:String>
-                        <x:String>MISC TERTIARY PLACEMENTS-30</x:String>
-                        <x:String>PRO PROFESSIONAL SERVICES-COMMERCIAL-31</x:String>
-                        <x:String>PRO PROFESSIONAL SERVICES-CONSUMER-2</x:String>
-                        <x:String>PUD PURCH DEBT-BANKS &amp; FINANCE-72</x:String>
-                        <x:String>PUD PURCH DEBT-GOVERNMENT-72</x:String>
-                        <x:String>PUD PURCH DEBT-HEALTH CARE-30</x:String>
-                        <x:String>PUD PURCH DEBT-OTHER-72</x:String>
-                        <x:String>PUD PURCH DEBT-UTILITIES &amp; TELECOM-72</x:String>
-                        <x:String>PURCHASED-LISTINGS&gt;5YRS</x:String>
-                        <x:String>UTT TELECOM/CABLE CONSUMER-9</x:String>
-                        <x:String>UTT UTILITIES-CONSUMER-9</x:String>
-                        <x:String>UTT UTILITIES/TELECOM COMMERCIAL-31</x:String>
-                        <x:String>HCN MEDICAL - DO NOT SUE-24</x:String>
-                        <x:String>OREGON HEALTH CARE-24</x:String>
-                        <x:String>HEALTHCARE-LISTINGS&gt;5YRS-30</x:String>
-                        <x:String>PURCHASED-LISTINGS&gt;5YRS-72</x:String>
-                        <x:String>GOV - COURTS-26</x:String>
-                      </scg:List>
-                    </uix:NSelectItem.Items>
-                    <uix:NSelectItem.Target>
-                      <uix:TargetAnchorable BrowserURL="https://pcs-uat.professionalcredit.com/clientmaster" CVScreenId="33bd8a90-23cd-49b2-8ce3-cb8cd30db950" CvElementArea="1110, 626, 353, 56" CvType="InputBox" DesignTimeRectangle="1113, 629, 347, 51" DesignTimeScaleFactor="1.5" ElementType="DropDown" FullSelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl id='cmbclassification' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl id='cmbclassification' tag='SELECT' type='' class='form-control clientMasterId disabled' aaname='' /&gt;" Guid="1d43a540-bb80-4836-b7be-70d96180488d" InformativeScreenshot="f0ef47566fb4653f8cc73529ef1c9eef.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ARTrail [PCS]' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive">
-                        <uix:TargetAnchorable.Anchors>
-                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                            <uix:Target CVScreenId="33bd8a90-23cd-49b2-8ce3-cb8cd30db950" CvTextArea="1128, 598, 106, 18" CvTextArgument="Classification" CvType="Text" DesignTimeRectangle="1122, 596, 121, 27" ElementType="Text" FullSelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl aaname='Classification' parentid='section2' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl aaname='Classification' parentid='section2' tag='LABEL' type='' class='' check:innerText='Classification' /&gt;" Guid="0a03367b-b849-42ec-90f4-2d9a9f16d255" SearchSteps="FuzzySelector, CV" />
-                          </scg:List>
-                        </uix:TargetAnchorable.Anchors>
-                      </uix:TargetAnchorable>
-                    </uix:NSelectItem.Target>
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                  </uix:NSelectItem>
-                  <uix:NSelectItem DisplayName="Select Item 'Client Account Type'" sap:VirtualizedContainerService.HintSize="354,57.333333333333336" sap2010:WorkflowViewState.IdRef="NSelectItem_8" Item="Full Collect" ScopeIdentifier="b1906716-c12c-48f1-98cc-e90f0e4eb7a0" Version="V3">
-                    <uix:NSelectItem.Items>
-                      <scg:List x:TypeArguments="x:String" Capacity="6">
-                        <x:String>Select</x:String>
-                        <x:String>Pre Collect</x:String>
-                        <x:String>Full Collect</x:String>
-                        <x:String>Judgement Only</x:String>
-                        <x:String>Second Placement Only</x:String>
-                        <x:String>Revolving Account</x:String>
-                      </scg:List>
-                    </uix:NSelectItem.Items>
-                    <uix:NSelectItem.Target>
-                      <uix:TargetAnchorable BrowserURL="https://pcs-uat.professionalcredit.com/clientmaster" CVScreenId="e70427ff-124d-449e-854e-67cc9a59d82a" CvElementArea="1501, 626, 354, 56" CvType="InputBox" DesignTimeRectangle="1505, 629, 348, 51" DesignTimeScaleFactor="1.5" ElementType="DropDown" FullSelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl id='cmbTypeClientAccount' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl id='cmbTypeClientAccount' tag='SELECT' type='' class='form-control clientMasterId disabled' aaname='' /&gt;" Guid="d4c6495c-a75d-4db4-848f-8c6f086fae23" InformativeScreenshot="62664d99ee764ff31a409ac489131fc9.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ARTrail [PCS]' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive">
-                        <uix:TargetAnchorable.Anchors>
-                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                            <uix:Target CVScreenId="e70427ff-124d-449e-854e-67cc9a59d82a" CvTextArea="1519, 598, 161, 23" CvTextArgument="Client Account Type" CvType="Text" DesignTimeRectangle="1514, 596, 174, 27" ElementType="Text" FullSelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl aaname='Client Account Type' parentid='section2' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl aaname='Client Account Type' parentid='section2' tag='LABEL' type='' class='' check:innerText='Client Account Type' /&gt;" Guid="f288637f-b8a2-43e1-a2f8-4104c2d9d993" SearchSteps="FuzzySelector, CV" />
-                          </scg:List>
-                        </uix:TargetAnchorable.Anchors>
-                      </uix:TargetAnchorable>
-                    </uix:NSelectItem.Target>
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                  </uix:NSelectItem>
-                  <uix:NSelectItem DisplayName="Select Item 'Commission Type'" sap:VirtualizedContainerService.HintSize="354,57.333333333333336" sap2010:WorkflowViewState.IdRef="NSelectItem_9" Item="Contingency" ScopeIdentifier="b1906716-c12c-48f1-98cc-e90f0e4eb7a0" Version="V3">
-                    <uix:NSelectItem.Items>
-                      <scg:List x:TypeArguments="x:String" Capacity="3">
-                        <x:String>Select</x:String>
-                        <x:String>Contingency</x:String>
-                        <x:String>Purchase</x:String>
-                      </scg:List>
-                    </uix:NSelectItem.Items>
-                    <uix:NSelectItem.Target>
-                      <uix:TargetAnchorable BrowserURL="https://pcs-uat.professionalcredit.com/clientmaster" CVScreenId="4a140bd5-4e03-42cd-98ef-11723a787635" CvElementArea="717, 721, 352, 55" CvType="InputBox" DesignTimeRectangle="721, 723, 347, 51" DesignTimeScaleFactor="1.5" ElementType="DropDown" FullSelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl id='cmbTypeDebt' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl id='cmbTypeDebt' tag='SELECT' type='' class='form-control clientMasterId disabled' aaname='' /&gt;" Guid="29542c7e-493e-4088-a66b-1c8b2fa5b8f8" InformativeScreenshot="735e6753558b1eb2fc64e06452b4e90b.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ARTrail [PCS]' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive">
-                        <uix:TargetAnchorable.Anchors>
-                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                            <uix:Target CVScreenId="4a140bd5-4e03-42cd-98ef-11723a787635" CvTextArea="735, 693, 145, 21" CvTextArgument="Commission Type" CvType="Text" DesignTimeRectangle="730, 690, 157, 27" ElementType="Text" FullSelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl aaname='Commission Type' parentid='section2' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl aaname='Commission Type' parentid='section2' tag='LABEL' type='' class='' check:innerText='Commission Type' /&gt;" Guid="c714812a-c4d9-414e-be2b-32ed0b96efa2" SearchSteps="FuzzySelector, CV" />
-                          </scg:List>
-                        </uix:TargetAnchorable.Anchors>
-                      </uix:TargetAnchorable>
-                    </uix:NSelectItem.Target>
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                  </uix:NSelectItem>
-                  <If Condition="[stngs_Config(&quot;Does Licensed Business Name Match Contract?&quot;).ToString().ToUpper.Equals(&quot;YES&quot;)]" sap:VirtualizedContainerService.HintSize="354,48" sap2010:WorkflowViewState.IdRef="If_2">
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                    <If.Then>
-                      <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,308" sap2010:WorkflowViewState.IdRef="Sequence_3">
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Contract Match'" sap:VirtualizedContainerService.HintSize="354,220" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b1906716-c12c-48f1-98cc-e90f0e4eb7a0" Version="V3">
-                          <uix:NClick.Target>
-                            <uix:TargetAnchorable BrowserURL="https://pcs-uat.professionalcredit.com/clientmaster" DesignTimeRectangle="871, 677, 24, 27" DesignTimeScaleFactor="1.5" ElementType="CheckBox" FullSelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl id='chkconAgreementAttached' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl id='chkconAgreementAttached' tag='INPUT' type='checkbox' class='custom-control-input clientMasterId' aaname='Contract Match with Business Name?' /&gt;" Guid="3d35fe7d-3d62-4670-9e34-99620d0c8207" InformativeScreenshot="725a6d6541071360ea97d3a4c698dfbd.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ARTrail [PCS]' /&gt;" SearchSteps="FuzzySelector" Version="V3" Visibility="Interactive">
-                              <uix:TargetAnchorable.Anchors>
-                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                  <uix:Target CVScreenId="2fa1b25d-2071-4fd7-858f-1fb57a5b0cdd" CvElementArea="850, 665, 483, 56" CvTextArea="904, 684, 351, 19" CvTextArgument="Contract Match with Business Name?" CvType="Button" DesignTimeRectangle="907, 677, 348, 36" ElementType="Text" FullSelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl class='custom-control-label' parentid='section2' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl class='custom-control-label' parentid='section2' tag='LABEL' type='' aaname='Contract Match with Business Name?' check:innerText='Contract Match with Business Name?' /&gt;" Guid="24c34f9f-0070-45d8-bf6c-e674ef53b351" SearchSteps="FuzzySelector, CV" />
-                                </scg:List>
-                              </uix:TargetAnchorable.Anchors>
-                            </uix:TargetAnchorable>
-                          </uix:NClick.Target>
-                          <uix:NClick.VerifyOptions>
-                            <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
-                              <uix:VerifyExecutionOptions.Retry>
-                                <InArgument x:TypeArguments="x:Boolean" />
-                              </uix:VerifyExecutionOptions.Retry>
-                              <uix:VerifyExecutionOptions.Timeout>
-                                <InArgument x:TypeArguments="x:Double" />
-                              </uix:VerifyExecutionOptions.Timeout>
-                            </uix:VerifyExecutionOptions>
-                          </uix:NClick.VerifyOptions>
-                          <sap:WorkflowViewStateService.ViewState>
-                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                            </scg:Dictionary>
-                          </sap:WorkflowViewStateService.ViewState>
-                        </uix:NClick>
-                      </Sequence>
-                    </If.Then>
-                    <If.Else>
-                      <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,104.66666666666667" sap2010:WorkflowViewState.IdRef="Sequence_4">
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                      </Sequence>
-                    </If.Else>
-                  </If>
-                </Sequence>
-              </ui:CommentOut.Body>
+            <uix:NSelectItem DisplayName="Select Item 'Client Account Type'" sap:VirtualizedContainerService.HintSize="450,57.333333333333336" sap2010:WorkflowViewState.IdRef="NSelectItem_4" Item="Full Collect" ScopeIdentifier="b1906716-c12c-48f1-98cc-e90f0e4eb7a0" Version="V3">
+              <uix:NSelectItem.Items>
+                <scg:List x:TypeArguments="x:String" Capacity="6">
+                  <x:String>Select</x:String>
+                  <x:String>Pre Collect</x:String>
+                  <x:String>Full Collect</x:String>
+                  <x:String>Judgement Only</x:String>
+                  <x:String>Second Placement Only</x:String>
+                  <x:String>Revolving Account</x:String>
+                </scg:List>
+              </uix:NSelectItem.Items>
+              <uix:NSelectItem.Target>
+                <uix:TargetAnchorable BrowserURL="https://pcs-uat.professionalcredit.com/clientmaster" CVScreenId="e70427ff-124d-449e-854e-67cc9a59d82a" CvElementArea="1501, 626, 354, 56" CvType="InputBox" DesignTimeRectangle="1505, 629, 348, 51" DesignTimeScaleFactor="1.5" ElementType="DropDown" FullSelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl id='cmbTypeClientAccount' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl id='cmbTypeClientAccount' tag='SELECT' type='' class='form-control clientMasterId disabled' aaname='' /&gt;" Guid="d4c6495c-a75d-4db4-848f-8c6f086fae23" InformativeScreenshot="62664d99ee764ff31a409ac489131fc9.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ARTrail [PCS]' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CVScreenId="e70427ff-124d-449e-854e-67cc9a59d82a" CvTextArea="1519, 598, 161, 23" CvTextArgument="Client Account Type" CvType="Text" DesignTimeRectangle="1514, 596, 174, 27" ElementType="Text" FullSelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl aaname='Client Account Type' parentid='section2' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl aaname='Client Account Type' parentid='section2' tag='LABEL' type='' class='' check:innerText='Client Account Type' /&gt;" Guid="f288637f-b8a2-43e1-a2f8-4104c2d9d993" SearchSteps="FuzzySelector, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NSelectItem.Target>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-            </ui:CommentOut>
-            <uix:NSelectItem DisplayName="Select Item 'Disposition Status'" sap:VirtualizedContainerService.HintSize="354,191.33333333333334" sap2010:WorkflowViewState.IdRef="NSelectItem_10" Item="NoLoad" ScopeIdentifier="b1906716-c12c-48f1-98cc-e90f0e4eb7a0" Version="V3">
+            </uix:NSelectItem>
+            <uix:NSelectItem DisplayName="Select Item 'Commission Type'" sap:VirtualizedContainerService.HintSize="450,57.333333333333336" sap2010:WorkflowViewState.IdRef="NSelectItem_5" Item="Contingency" ScopeIdentifier="b1906716-c12c-48f1-98cc-e90f0e4eb7a0" Version="V3">
+              <uix:NSelectItem.Items>
+                <scg:List x:TypeArguments="x:String" Capacity="3">
+                  <x:String>Select</x:String>
+                  <x:String>Contingency</x:String>
+                  <x:String>Purchase</x:String>
+                </scg:List>
+              </uix:NSelectItem.Items>
+              <uix:NSelectItem.Target>
+                <uix:TargetAnchorable BrowserURL="https://pcs-uat.professionalcredit.com/clientmaster" CVScreenId="4a140bd5-4e03-42cd-98ef-11723a787635" CvElementArea="717, 721, 352, 55" CvType="InputBox" DesignTimeRectangle="721, 723, 347, 51" DesignTimeScaleFactor="1.5" ElementType="DropDown" FullSelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl id='cmbTypeDebt' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl id='cmbTypeDebt' tag='SELECT' type='' class='form-control clientMasterId disabled' aaname='' /&gt;" Guid="29542c7e-493e-4088-a66b-1c8b2fa5b8f8" InformativeScreenshot="735e6753558b1eb2fc64e06452b4e90b.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ARTrail [PCS]' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive" WaitForReadyArgument="Complete">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CVScreenId="4a140bd5-4e03-42cd-98ef-11723a787635" CvTextArea="735, 693, 145, 21" CvTextArgument="Commission Type" CvType="Text" DesignTimeRectangle="730, 690, 157, 27" ElementType="Text" FullSelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl aaname='Commission Type' parentid='section2' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl aaname='Commission Type' parentid='section2' tag='LABEL' type='' class='' check:innerText='Commission Type' /&gt;" Guid="c714812a-c4d9-414e-be2b-32ed0b96efa2" SearchSteps="FuzzySelector, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NSelectItem.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NSelectItem>
+            <If Condition="[stngs_Config(&quot;Does Licensed Business Name Match Contract?&quot;).ToString().ToUpper.Equals(&quot;YES&quot;)]" sap:VirtualizedContainerService.HintSize="450,584.6666666666666" sap2010:WorkflowViewState.IdRef="If_1">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <If.Then>
+                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,308" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Contract Match'" sap:VirtualizedContainerService.HintSize="354,220" sap2010:WorkflowViewState.IdRef="NClick_1" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b1906716-c12c-48f1-98cc-e90f0e4eb7a0" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://pcs-uat.professionalcredit.com/clientmaster" DesignTimeRectangle="871, 677, 24, 27" DesignTimeScaleFactor="1.5" ElementType="CheckBox" FullSelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl id='chkconAgreementAttached' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl id='chkconAgreementAttached' tag='INPUT' type='checkbox' class='custom-control-input clientMasterId' aaname='Contract Match with Business Name?' /&gt;" Guid="3d35fe7d-3d62-4670-9e34-99620d0c8207" InformativeScreenshot="725a6d6541071360ea97d3a4c698dfbd.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ARTrail [PCS]' /&gt;" SearchSteps="FuzzySelector" Version="V3" Visibility="Interactive" WaitForReadyArgument="Complete">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target CVScreenId="2fa1b25d-2071-4fd7-858f-1fb57a5b0cdd" CvElementArea="850, 665, 483, 56" CvTextArea="904, 684, 351, 19" CvTextArgument="Contract Match with Business Name?" CvType="Button" DesignTimeRectangle="907, 677, 348, 36" ElementType="Text" FullSelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl class='custom-control-label' parentid='section2' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl class='custom-control-label' parentid='section2' tag='LABEL' type='' aaname='Contract Match with Business Name?' check:innerText='Contract Match with Business Name?' /&gt;" Guid="24c34f9f-0070-45d8-bf6c-e674ef53b351" SearchSteps="FuzzySelector, CV" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NClick.Target>
+                    <uix:NClick.VerifyOptions>
+                      <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                        <uix:VerifyExecutionOptions.Retry>
+                          <InArgument x:TypeArguments="x:Boolean" />
+                        </uix:VerifyExecutionOptions.Retry>
+                        <uix:VerifyExecutionOptions.Timeout>
+                          <InArgument x:TypeArguments="x:Double" />
+                        </uix:VerifyExecutionOptions.Timeout>
+                      </uix:VerifyExecutionOptions>
+                    </uix:NClick.VerifyOptions>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NClick>
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,104.66666666666667" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
+              </If.Else>
+            </If>
+            <uix:NSelectItem DisplayName="Select Item 'Disposition Status'" sap:VirtualizedContainerService.HintSize="450,184.66666666666666" sap2010:WorkflowViewState.IdRef="NSelectItem_6" Item="Set up" ScopeIdentifier="b1906716-c12c-48f1-98cc-e90f0e4eb7a0" Version="V3">
               <uix:NSelectItem.Items>
                 <scg:List x:TypeArguments="x:String" Capacity="8">
                   <x:String>Select</x:String>
@@ -433,7 +378,7 @@
                 </scg:List>
               </uix:NSelectItem.Items>
               <uix:NSelectItem.Target>
-                <uix:TargetAnchorable BrowserURL="https://pcs-uat.professionalcredit.com/clientmaster" CVScreenId="f8be2f5c-1df9-4d4a-bdd6-ed6d3acd0f30" CvElementArea="1371, 664, 483, 55" CvType="InputBox" DesignTimeRectangle="1375, 667, 478, 51" DesignTimeScaleFactor="1.5" ElementType="DropDown" FullSelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl id='dispositionStatus' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl id='dispositionStatus' tag='SELECT' type='' class='form-control clientMasterId disabled' aaname='' /&gt;" Guid="4be16ff4-3c5a-484c-b314-8492593d9325" InformativeScreenshot="8194d8f5882e178a86cc24967d5ac196.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ARTrail [PCS]' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive">
+                <uix:TargetAnchorable BrowserURL="https://pcs-uat.professionalcredit.com/clientmaster" CVScreenId="f8be2f5c-1df9-4d4a-bdd6-ed6d3acd0f30" CvElementArea="1371, 664, 483, 55" CvType="InputBox" DesignTimeRectangle="1375, 667, 478, 51" DesignTimeScaleFactor="1.5" ElementType="DropDown" FullSelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl id='dispositionStatus' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl id='dispositionStatus' tag='SELECT' type='' class='form-control clientMasterId disabled' aaname='' /&gt;" Guid="4be16ff4-3c5a-484c-b314-8492593d9325" InformativeScreenshot="8194d8f5882e178a86cc24967d5ac196.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ARTrail [PCS]' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive" WaitForReadyArgument="Complete">
                   <uix:TargetAnchorable.Anchors>
                     <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                       <uix:Target CVScreenId="f8be2f5c-1df9-4d4a-bdd6-ed6d3acd0f30" CvTextArea="1389, 637, 145, 21" CvTextArgument="Disposition Status" CvType="Text" DesignTimeRectangle="1384, 635, 151, 27" ElementType="Text" FullSelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl class='requiredField' parentid='section2' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl id='clientmaster' tag='IFRAME' /&gt;&lt;webctrl class='requiredField' parentid='section2' tag='LABEL' type='' aaname='Disposition Status' check:innerText='Disposition Status' /&gt;" Guid="cc26ced7-dc58-424f-a2f0-65ab2e449147" SearchSteps="FuzzySelector, CV" />
@@ -448,7 +393,6 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </uix:NSelectItem>
-            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="354,117.33333333333333" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="Done" />
           </Sequence>
         </ActivityAction>
       </uix:NApplicationCard.Body>
